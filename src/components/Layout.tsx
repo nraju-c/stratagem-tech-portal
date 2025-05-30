@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+import logo from '../../public/favicon.png'
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -42,7 +43,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-sm">IT</span>
                   </div>
-                  <span className="text-white font-bold text-xl">TechSolutions</span>
+                  {/* <span className="text-white"> */}
+  <img
+    src={logo}
+    alt="Logo"
+    className="h-6 w-auto"
+    style={{height: 200}}
+  />
+{/* </span> */}
                 </div>
               </Link>
             </div>

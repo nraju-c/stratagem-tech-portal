@@ -3,6 +3,7 @@ import { ArrowRight, Cloud, Settings, Code, Users, CheckCircle, Star } from 'luc
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import video from "../../public/homevideo.mp4"
 
 const Home = () => {
   const services = [
@@ -95,7 +96,17 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
+      <video
+  className="absolute inset-0 w-full h-full object-cover"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+
+>
+  <source src={video} type="video/mp4" />
+</video>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
@@ -104,7 +115,7 @@ const Home = () => {
                 Digital Reality
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in">
+            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{color:'white'}}>
               Unleash the power of innovation with a strategic partner that redefines what's possible. 
               We specialize in accelerating business transformation through AI, cloud computing, data engineering, 
               cybersecurity, and emerging tech solutions. Our future-ready approach bridges the gap between 
@@ -112,10 +123,13 @@ const Home = () => {
               adapt, and lead in a rapidly shifting world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+            <a href="/contact">
+
               <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-lg px-8 py-3">
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              </a>
               <Button size="lg" variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white text-lg px-8 py-3">
                 Learn More
               </Button>
