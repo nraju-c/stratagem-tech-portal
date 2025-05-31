@@ -157,6 +157,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </div>
                 <span className="text-white font-bold text-xl">TechSolutions</span>
               </div>
+
               <p className="text-gray-400 text-sm">
                 Transforming Vision into Digital Reality through innovative technology solutions.
               </p>
@@ -171,7 +172,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <li><Link to="/services/development" className="text-gray-400 hover:text-white transition-colors">Software Development</Link></li>
               </ul>
             </div>
-            
             <div>
               <h3 className="text-white font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-sm">
