@@ -123,13 +123,13 @@ const Home = () => {
               adapt, and lead in a rapidly shifting world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-            <a href="/contact">
+            <Link to="/contact">
 
               <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-lg px-8 py-3">
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              </a>
+              </Link>
               <Button size="lg" variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white text-lg px-8 py-3">
                 Learn More
               </Button>
