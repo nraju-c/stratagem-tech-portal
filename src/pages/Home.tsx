@@ -186,7 +186,10 @@ const Home = () => {
     playsInline
     preload="auto"
   >
-    <source src='https://qsort.blob.core.windows.net/media/homevideo.mp4' type="video/mp4" />
+        <source src='    https://qsort.blob.core.windows.net/media/homevideo.webm
+' type="video/mp4" />
+
+    {/* <source src='https://qsort.blob.core.windows.net/media/homevideo.mp4' type="video/mp4" /> */}
   </video>
 
 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:pl-8 lg:pr-0">

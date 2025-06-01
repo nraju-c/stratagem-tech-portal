@@ -130,8 +130,35 @@ const Blog = () => {
                 className="pl-10 bg-slate-700 border-slate-600 text-white placeholder-gray-400"
               />
             </div>
-            
-            <div className="flex flex-wrap gap-2">
+   <div className="flex flex-wrap gap-2">
+  {categories.map(category => {
+    const isSelected = selectedCategory === category;
+
+    const buttonClass = isSelected
+      ? category === 'All'
+        ? 'text-white bg-blue-500 hover:bg-blue-600'
+        : 'text-black bg-white hover:bg-gray-200'
+      : category === 'All'
+        ? 'border-slate-600 text-gray-300 hover:text-white hover:bg-slate-700'
+        : 'border-slate-600 text-black hover:text-white hover:bg-slate-700';
+
+    return (
+      <Button
+        key={category}
+        variant={isSelected ? 'default' : 'outline'}
+        size="sm"
+        onClick={() => setSelectedCategory(category)}
+        className={buttonClass}
+      >
+        {category}
+      </Button>
+    );
+  })}
+</div>
+
+
+
+            {/* <div className="flex flex-wrap gap-2">
               {categories.map(category => (
                 <Button
                   key={category}
@@ -146,7 +173,7 @@ const Blog = () => {
                   {category}
                 </Button>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
