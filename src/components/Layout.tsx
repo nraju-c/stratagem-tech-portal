@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-import logo from '../../public/favicon.png'
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -30,6 +31,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' }
   ];
+  const logo='https://qsort.blob.core.windows.net/media/favicon.png'
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
@@ -40,9 +42,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex items-center">
               <Link to="/" className="flex-shrink-0">
                 <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center">
+                  {/* <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-sm">IT</span>
-                  </div>
+                  </div> */}
                   {/* <span className="text-white"> */}
   <img
     src={logo}
@@ -79,6 +81,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                         >
                           {item.subItems?.map((subItem) => (
                             <Link
+                            
                               key={subItem.name}
                               to={subItem.href}
                               className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors"
@@ -91,6 +94,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     </div>
                   ) : (
                     <Link
+                    
                       to={item.href}
                       className={`text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors ${
                         location.pathname === item.href ? 'text-blue-400' : ''
@@ -101,9 +105,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   )}
                 </div>
               ))}
-              <Button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600">
+              {/* <Button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600">
                 Get Started
-              </Button>
+              </Button> */}
             </div>
 
             {/* Mobile menu button */}
@@ -152,10 +156,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center">
+                {/* <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">IT</span>
-                </div>
-                <span className="text-white font-bold text-xl">TechSolutions</span>
+                </div> */}
+                <span className="text-white font-bold text-xl">QSORT</span>
               </div>
 
               <p className="text-gray-400 text-sm">
@@ -198,11 +202,25 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
           
-          <div className="border-t border-slate-700 mt-8 pt-8 text-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 TechSolutions LLC. All rights reserved.
-            </p>
-          </div>
+         <div className="border-t border-slate-700 mt-8 pt-8 text-center">
+  <div className="flex justify-center space-x-6 mb-4">
+    <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+      <Facebook className="h-5 w-5" />
+    </a>
+    <a href="https://twitter.com/YOUR_HANDLE" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+      <Twitter className="h-5 w-5" />
+    </a>
+    <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+      <Linkedin className="h-5 w-5" />
+    </a>
+    <a href="https://www.instagram.com/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+      <Instagram className="h-5 w-5" />
+    </a>
+  </div>
+
+ 
+</div>
+
         </div>
       </footer>
     </div>

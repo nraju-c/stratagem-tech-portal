@@ -95,7 +95,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      {/* <section className="relative py-20 lg:py-32 overflow-hidden">
       <video
   className="absolute inset-0 w-full h-full object-cover"
   autoPlay
@@ -103,6 +103,7 @@ const Home = () => {
   muted
   playsInline
   preload="auto"
+
 
 >
   <source src={video} type="video/mp4" />
@@ -130,13 +131,97 @@ const Home = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white text-lg px-8 py-3">
-                Learn More
-              </Button>
+              
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {/* <section className="pt-12 pb-12 lg:pt-16 lg:pb-16	 overflow-hidden">
+  <video
+    className="absolute inset-0 w-full h-full object-cover"
+    autoPlay
+    loop
+    muted
+    playsInline
+    preload="auto"
+  >
+    <source src={video} type="video/mp4" />
+  </video>
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-end">
+      <div className="max-w-2xl text-right">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+          Transforming Vision into{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+            Digital Reality
+          </span>
+        </h1>
+        <p className="text-xl text-gray-300 mb-8 leading-relaxed animate-fade-in" style={{ color: 'white' }}>
+          Unleash the power of innovation with a strategic partner that redefines what's possible.
+          We specialize in accelerating business transformation through AI, cloud computing, data engineering,
+          cybersecurity, and emerging tech solutions. Our future-ready approach bridges the gap between
+          legacy infrastructure and intelligent digital ecosystems—empowering enterprises to evolve,
+          adapt, and lead in a rapidly shifting world.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-end animate-fade-in">
+          <Link to="/contact">
+            <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-lg px-8 py-3">
+              Get Started Today
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> */}
+<section className="relative pt-12 pb-12 lg:[padding-top:6rem] lg:pb-16 overflow-hidden">
+  <video
+    className="absolute inset-0 w-full h-full object-cover"
+    autoPlay
+    loop
+    muted
+    playsInline
+    preload="auto"
+  >
+    <source src='https://qsort.blob.core.windows.net/media/homevideo.mp4' type="video/mp4" />
+  </video>
+
+<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:pl-8 lg:pr-0">
+    <div className="flex justify-end">
+    <div className="w-full max-w-[36rem] ml-[7rem] text-left">
+  <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in leading-tight">
+    Transforming Vision into{' '}
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+      Digital Reality
+    </span>
+  </h1>
+
+  <p className="text-lg text-gray-300 mb-8 leading-relaxed animate-fade-in" style={{color:'white'}}>
+    Unleash the power of innovation with a strategic partner that redefines what's possible.
+    We specialize in accelerating business transformation through AI, cloud computing, data engineering,
+    cybersecurity, and emerging tech solutions. Our future-ready approach bridges the gap between
+    legacy infrastructure and intelligent digital ecosystems—empowering enterprises to evolve,
+    adapt, and lead in a rapidly shifting world.
+  </p>
+
+  <div className="flex justify-center animate-fade-in">
+    <Link to="/contact">
+      <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-lg px-8 py-3">
+        Get Started Today
+        <ArrowRight className="ml-2 h-5 w-5" />
+      </Button>
+    </Link>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
 
       {/* Service Highlights */}
       <section className="py-20 bg-slate-800/50">
@@ -195,7 +280,7 @@ const Home = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose TechSolutions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose QSORT</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Your trusted partner for digital transformation and technology excellence
             </p>
@@ -257,7 +342,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      {/* <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -274,7 +359,7 @@ const Home = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
