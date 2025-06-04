@@ -3,7 +3,8 @@ import { ArrowRight, Cloud, Settings, Code, Users, CheckCircle, Star } from 'luc
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import video from "../../public/homevideo.mp4"
+import '@/styles/fonts.css';
+
 
 const Home = () => {
   const services = [
@@ -186,7 +187,7 @@ const Home = () => {
     playsInline
     preload="auto"
   >
-        <source src='    https://qsort.blob.core.windows.net/media/homevideo.webm
+        <source src='https://qsort.blob.core.windows.net/media/QSORT_Website_Clip.mp4
 ' type="video/mp4" />
 
     {/* <source src='https://qsort.blob.core.windows.net/media/homevideo.mp4' type="video/mp4" /> */}
@@ -195,12 +196,28 @@ const Home = () => {
 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:pl-8 lg:pr-0">
     <div className="flex justify-end">
     <div className="w-full max-w-[36rem] ml-[7rem] text-left">
-  <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in leading-tight">
+  {/* <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in leading-tight">
     Transforming Vision into{' '}
     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
       Digital Reality
     </span>
-  </h1>
+  </h1> */}
+  {/* <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in leading-tight font-modeling">
+  Transforming Vision into{' '}
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+    Digital Reality
+  </span>
+</h1> */}
+
+<h1  style={{ fontSize: '3.15rem' }} className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in leading-tight font-modeling max-w-[36rem] break-words">
+  Transforming Vision into{' '}
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+    Digital Reality
+  </span>
+</h1>
+
+
+
 
   <p className="text-lg text-gray-300 mb-8 leading-relaxed animate-fade-in" style={{color:'white'}}>
     Unleash the power of innovation with a strategic partner that redefines what's possible.
@@ -331,7 +348,7 @@ const Home = () => {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <div className="text-sm text-gray-400 mb-2">{post.date} • By {post.author}</div>
+                  {/* <div className="text-sm text-gray-400 mb-2">{post.date} • By {post.author}</div> */}
                   <h3 className="text-xl font-semibold text-white mb-3">{post.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{post.excerpt}</p>
                   <Link to="/blog" className="text-blue-400 hover:text-blue-300 text-sm font-medium">

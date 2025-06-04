@@ -198,7 +198,7 @@ const Blog = () => {
                 </div>
                 
                 <CardContent className="p-6">
-                  <div className="flex items-center text-sm text-gray-400 mb-3 space-x-4">
+                  {/* <div className="flex items-center text-sm text-gray-400 mb-3 space-x-4">
                     <div className="flex items-center">
                       <Calendar className="h-4 w-4 mr-1" />
                       {post.date}
@@ -207,7 +207,7 @@ const Blog = () => {
                       <User className="h-4 w-4 mr-1" />
                       {post.author}
                     </div>
-                  </div>
+                  </div> */}
                   
                   <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">{post.title}</h3>
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">{post.excerpt}</p>

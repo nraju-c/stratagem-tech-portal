@@ -19,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+    thommy: ['Thommy', 'Arial', 'sans-serif'],
+	modeling: ['Modeling', 'Verdana', 'sans-serif'],
+  },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -115,5 +119,6 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"),require('@tailwindcss/line-clamp'),
+  require('tailwindcss-animate')],
 } satisfies Config;

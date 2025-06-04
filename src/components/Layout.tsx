@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import '@/styles/fonts.css';
 
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -12,26 +13,26 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
+    { name: 'HOME', href: '/' },
+    { name: 'ABOUT', href: '/about' },
     { 
-      name: 'Services', 
+      name: 'SERVICES', 
       href: '/services',
       hasDropdown: true,
       subItems: [
-        { name: 'IT Consulting', href: '/services/consulting' },
-        { name: 'Cloud Solutions', href: '/services/cloud' },
-        { name: 'AI & Automation', href: '/services/ai' },
-        { name: 'Software Development', href: '/services/development' },
-        { name: 'Project Management', href: '/services/project-management' }
+        { name: 'IT CONSULTING', href: '/services/consulting' },
+        { name: 'CLOUD SOLUTIONS', href: '/services/cloud' },
+        { name: 'AI & AUTOMATION', href: '/services/ai' },
+        { name: 'SOFTWARE DEVELOPMENT', href: '/services/development' },
+        { name: 'PROJECT MANAGEMENT', href: '/services/project-management' }
       ]
     },
-    { name: 'Industries', href: '/industries' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'INDUSTRIES', href: '/industries' },
+    { name: 'BLOG', href: '/blog' },
+    { name: 'CAREERS', href: '/careers' },
+    { name: 'CONTACT', href: '/contact' }
   ];
-  const logo='https://qsort.blob.core.windows.net/media/favicon.png'
+  const logo='https://qsort.blob.core.windows.net/media/qsortHead.svg'
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
@@ -41,19 +42,16 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link to="/" className="flex-shrink-0">
-                <div className="flex items-center space-x-2">
-                  {/* <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">IT</span>
-                  </div> */}
-                  {/* <span className="text-white"> */}
+                <div className="flex items-center space-x-2 ml-[-24px] sm:ml-[-32px]">
   <img
     src={logo}
     alt="Logo"
-    className="h-6 w-auto"
-    style={{height: 200}}
+    className="h-90 w-auto sm:h-90"
+  style={{height:300}}
   />
-{/* </span> */}
-                </div>
+</div>
+
+
               </Link>
             </div>
 
@@ -96,7 +94,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     <Link
                     
                       to={item.href}
-                      className={`text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors ${
+                      className={`font-modeling text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors ${
                         location.pathname === item.href ? 'text-blue-400' : ''
                       }`}
                     >

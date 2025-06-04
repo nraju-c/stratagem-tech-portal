@@ -162,7 +162,7 @@ const BlogPost = () => {
         </article>
 
         {/* Author Bio */}
-        <Card className="bg-slate-700/30 border-slate-600 mb-16">
+        {/* <Card className="bg-slate-700/30 border-slate-600 mb-16">
           <CardContent className="p-8">
             <div className="flex items-start space-x-6">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full overflow-hidden flex-shrink-0">
@@ -178,7 +178,7 @@ const BlogPost = () => {
               </div>
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
 
         {/* Related Posts */}
         <section>
@@ -203,7 +203,7 @@ const BlogPost = () => {
         </section>
 
         {/* CTA */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <Card className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h3>
@@ -224,7 +224,7 @@ const BlogPost = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
       </div>
     </div>
   );

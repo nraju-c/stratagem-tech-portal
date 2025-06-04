@@ -141,19 +141,19 @@ const Industries = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">15+</div>
+              {/* <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">15+</div> */}
               <div className="text-gray-300 font-medium">Years of Experience</div>
               <p className="text-gray-400 text-sm mt-2">Deep industry knowledge across all verticals</p>
             </div>
             
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">500+</div>
+              {/* <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">500+</div> */}
               <div className="text-gray-300 font-medium">Industry Projects</div>
               <p className="text-gray-400 text-sm mt-2">Successful implementations across sectors</p>
             </div>
             
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">99%</div>
+              {/* <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">99%</div> */}
               <div className="text-gray-300 font-medium">Client Satisfaction</div>
               <p className="text-gray-400 text-sm mt-2">Proven track record of success</p>
             </div>

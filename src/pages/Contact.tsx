@@ -239,7 +239,7 @@ const Contact = () => {
             </Card>
 
             {/* Quick Links */}
-            <Card className="bg-slate-700/30 border-slate-600">
+            {/* <Card className="bg-slate-700/30 border-slate-600">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Quick Actions</h3>
                 <div className="space-y-3">
@@ -254,7 +254,7 @@ const Contact = () => {
                   </Button>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
 

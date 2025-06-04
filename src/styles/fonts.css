@@ -1,0 +1,36 @@
+/* Thommy Font */
+@font-face {
+  font-family: 'Thommy';
+  src: url('/fonts/Thommy-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Thommy';
+  src: url('/fonts/Thommy-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Thommy';
+  src: url('/fonts/Thommy-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Modeling Font */
+@font-face {
+  font-family: 'Modeling';
+  src: url('/fonts/Modeling-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Modeling';
+  src: url('/fonts/Modeling-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
