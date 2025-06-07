@@ -22,6 +22,7 @@ export default {
 			fontFamily: {
     thommy: ['Thommy', 'Arial', 'sans-serif'],
 	modeling: ['Modeling', 'Verdana', 'sans-serif'],
+	orbitron: ['Orbitron', 'sans-serif'],
   },
 			colors: {
 				border: 'hsl(var(--border))',

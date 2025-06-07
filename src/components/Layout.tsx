@@ -42,12 +42,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link to="/" className="flex-shrink-0">
-                <div className="flex items-center space-x-2 ml-[-24px] sm:ml-[-32px]">
+                <div className="flex items-center space-x-2 ml-[-24px] sm:ml-[-82px]">
   <img
     src={logo}
     alt="Logo"
     className="h-90 w-auto sm:h-90"
-  style={{height:300}}
+  style={{height:360}}
   />
 </div>
 
@@ -57,7 +57,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {navigation.map((item) => (
+              {/* {navigation.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.hasDropdown ? (
                     <div className="relative">
@@ -82,7 +82,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                             
                               key={subItem.name}
                               to={subItem.href}
-                              className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors"
+className="block px-4 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors"
                             >
                               {subItem.name}
                             </Link>
@@ -91,21 +91,71 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                       )}
                     </div>
                   ) : (
-                    <Link
-                    
-                      to={item.href}
-                      className={`font-modeling text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors ${
-                        location.pathname === item.href ? 'text-blue-400' : ''
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
+                <Link
+  to={item.href}
+  className={`font-sans font-bold tracking-wide px-3 py-2 text-sm transition-colors ${
+    location.pathname === item.href ? 'text-blue-400' : 'text-white'
+  }`}
+>
+  {item.name}
+</Link>
+
+
                   )}
                 </div>
-              ))}
-              {/* <Button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600">
-                Get Started
-              </Button> */}
+              ))} */}
+             {navigation.map((item) => (
+  <div key={item.name} className="relative group">
+    {item.hasDropdown ? (
+      <div className="relative">
+       <button
+  className={`font-sans font-bold tracking-wide px-3 py-2 text-sm transition-colors flex items-center ${
+    location.pathname.startsWith(item.href) && item.href !== '/'
+      ? 'text-blue-400'
+      : 'text-white'
+  }`}
+  onMouseEnter={() => setIsServicesOpen(true)}
+  onMouseLeave={() => setIsServicesOpen(false)}
+>
+  <span className="flex items-center space-x-1">
+    <span>{item.name}</span>
+    <ChevronDown className="w-4 h-4 mt-0.5" />
+  </span>
+</button>
+
+        {isServicesOpen && (
+          <div
+            className="absolute top-full left-0 mt-1 w-64 bg-slate-800 rounded-lg shadow-xl border border-blue-500/20 py-2"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            {item.subItems?.map((subItem) => (
+              <Link
+                key={subItem.name}
+                to={subItem.href}
+                className="block px-4 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors"
+              >
+                {subItem.name}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    ) : (
+      <Link
+        to={item.href}
+        className={`font-sans font-bold tracking-wide px-3 py-2 text-sm transition-colors ${
+          location.pathname === item.href && item.href !== '/'
+            ? 'text-blue-400'
+            : 'text-white'
+        }`}
+      >
+        {item.name}
+      </Link>
+    )}
+  </div>
+))}
+
             </div>
 
             {/* Mobile menu button */}
@@ -128,7 +178,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 text-base font-medium transition-colors ${
+className={`block px-3 py-2 text-base font-bold tracking-wide transition-colors ${
                     location.pathname === item.href
                       ? 'text-blue-400 bg-slate-700/50'
                       : 'text-gray-300 hover:text-white hover:bg-slate-700/50'

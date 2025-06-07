@@ -104,13 +104,12 @@ const Industries = () => {
                   
                  
                   
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
-                  >
-                    Learn More
-                  </Button>
+                <Link to={`/industries/${encodeURIComponent(industry.name)}`}>
+  <button className="mt-4 w-full bg-white text-blue-500 hover:bg-blue-500 hover:text-white py-2 rounded">
+    Learn More
+  </button>
+</Link>
+
                 </CardContent>
               </Card>
             ))}
