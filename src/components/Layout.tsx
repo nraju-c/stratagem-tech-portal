@@ -20,11 +20,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       href: '/services',
       hasDropdown: true,
       subItems: [
-        { name: 'IT CONSULTING', href: '/services/consulting' },
-        { name: 'CLOUD SOLUTIONS', href: '/services/cloud' },
-        { name: 'AI & AUTOMATION', href: '/services/ai' },
-        { name: 'SOFTWARE DEVELOPMENT', href: '/services/development' },
-        { name: 'PROJECT MANAGEMENT', href: '/services/project-management' }
+        { name: 'IT Consulting', href: '/services/consulting' },
+        { name: 'Cloud Solutions', href: '/services/cloud' },
+        { name: 'AI & Automation', href: '/services/ai' },
+        { name: 'Software Development', href: '/services/development' },
+        { name: 'Project Management', href: '/services/project-management' }
       ]
     },
     { name: 'INDUSTRIES', href: '/industries' },
