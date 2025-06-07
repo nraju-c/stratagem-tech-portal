@@ -166,7 +166,7 @@ className={`block px-3 py-2 text-base font-bold tracking-wide transition-colors 
                 {/* <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">IT</span>
                 </div> */}
-                <span className="text-white font-bold text-xl">QSORT</span>
+                <span className="text-white font-bold text-xl font-dind">QSORT</span>
               </div>
 
               <p className="text-gray-400 text-sm">
@@ -175,7 +175,7 @@ className={`block px-3 py-2 text-base font-bold tracking-wide transition-colors 
             </div>
             
             <div>
-              <h3 className="text-white font-semibold mb-4">Services</h3>
+              <h3 className="text-white font-semibold mb-4 font-dind">Services</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link to="/services/consulting" className="text-gray-400 hover:text-white transition-colors">IT Consulting</Link></li>
                 <li><Link to="/services/cloud" className="text-gray-400 hover:text-white transition-colors">Cloud Solutions</Link></li>
@@ -184,7 +184,7 @@ className={`block px-3 py-2 text-base font-bold tracking-wide transition-colors 
               </ul>
             </div>
             <div>
-              <h3 className="text-white font-semibold mb-4">Company</h3>
+              <h3 className="text-white font-semibold mb-4 font-dind">Company</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
                 <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
@@ -194,7 +194,7 @@ className={`block px-3 py-2 text-base font-bold tracking-wide transition-colors 
             </div>
             
             <div>
-              <h3 className="text-white font-semibold mb-4">Newsletter</h3>
+              <h3 className="text-white font-semibold mb-4 font-dind">Newsletter</h3>
               <p className="text-gray-400 text-sm mb-4">Stay updated with our latest insights</p>
               <div className="flex">
                 <input

@@ -187,7 +187,7 @@ const Home = () => {
     playsInline
     preload="auto"
   >
-        <source src='https://qsort.blob.core.windows.net/media/QSORT_Website_Clip.mp4
+        <source src='https://qsort.blob.core.windows.net/media/QSORT_Clip_2.webm
 ' type="video/mp4" />
 
     {/* <source src='https://qsort.blob.core.windows.net/media/homevideo.mp4' type="video/mp4" /> */}
@@ -221,7 +221,7 @@ const Home = () => {
 
   <div className="flex justify-center animate-fade-in">
     <Link to="/contact">
-      <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-lg px-8 py-3">
+      <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-lg px-8 py-3 font-dind">
         Get Started Today
         <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
@@ -256,7 +256,7 @@ const Home = () => {
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <IconComponent className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-3 font-dind">{service.title}</h3>
                     <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                     <Link to={service.link} className="text-blue-400 hover:text-blue-300 text-sm font-medium">
                       Learn More →
