@@ -23,6 +23,8 @@ export default {
     thommy: ['Thommy', 'Arial', 'sans-serif'],
 	modeling: ['Modeling', 'Verdana', 'sans-serif'],
 	orbitron: ['Orbitron', 'sans-serif'],
+	    dind: ['D-DIN', 'Arial', 'Verdana', 'sans-serif'],
+
   },
 			colors: {
 				border: 'hsl(var(--border))',

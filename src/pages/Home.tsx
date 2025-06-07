@@ -196,20 +196,12 @@ const Home = () => {
 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:pl-8 lg:pr-0">
     <div className="flex justify-end">
     <div className="w-full max-w-[36rem] ml-[7rem] text-left">
-  {/* <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in leading-tight">
-    Transforming Vision into{' '}
-    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-      Digital Reality
-    </span>
-  </h1> */}
-  {/* <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in leading-tight font-modeling">
-  Transforming Vision into{' '}
-  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-    Digital Reality
-  </span>
-</h1> */}
+  
 
-<h1  style={{ fontSize: '3.15rem' }} className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in leading-tight font-modeling max-w-[36rem] break-words">
+<h1
+  style={{ fontSize: '3.15rem' }}
+  className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in leading-tight font-dind max-w-[36rem] break-words uppercase"
+>
   Transforming Vision into{' '}
   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
     Digital Reality
@@ -247,7 +239,9 @@ const Home = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Core Services</h2>
+<h2 className="text-4xl md:text-4xl font-bold text-white mb-6 leading-tight font-dind  break-words">
+  Our Core Services
+</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive technology solutions designed to accelerate your digital transformation journey
             </p>
@@ -279,7 +273,7 @@ const Home = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Industries We Serve</h2>
+            <h2 className="text-4xl md:text-4xl font-bold text-white mb-6 leading-tight font-dind  break-words">Industries We Serve</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Delivering specialized solutions across diverse industry verticals
             </p>
@@ -300,7 +294,7 @@ const Home = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose QSORT</h2>
+            <h2 className="text-4xl md:text-4xl font-bold text-white mb-6 leading-tight font-dind  break-words">Why Choose QSORT</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Your trusted partner for digital transformation and technology excellence
             </p>
@@ -327,7 +321,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Latest Insights</h2>
+              <h2 className="text-4xl md:text-4xl font-bold text-white mb-6 leading-tight font-dind  break-words">Latest Insights</h2>
               <p className="text-xl text-gray-300">
                 Stay informed with our latest technology trends and insights
               </p>

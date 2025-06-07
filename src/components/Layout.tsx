@@ -57,59 +57,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {/* {navigation.map((item) => (
-                <div key={item.name} className="relative group">
-                  {item.hasDropdown ? (
-                    <div className="relative">
-                      <button
-                        className={`text-gray-300 hover:text-white px-3 py-2 text-sm font-medium flex items-center space-x-1 transition-colors ${
-                          location.pathname.startsWith(item.href) ? 'text-blue-400' : ''
-                        }`}
-                        onMouseEnter={() => setIsServicesOpen(true)}
-                        onMouseLeave={() => setIsServicesOpen(false)}
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </button>
-                      {isServicesOpen && (
-                        <div 
-                          className="absolute top-full left-0 mt-1 w-64 bg-slate-800 rounded-lg shadow-xl border border-blue-500/20 py-2"
-                          onMouseEnter={() => setIsServicesOpen(true)}
-                          onMouseLeave={() => setIsServicesOpen(false)}
-                        >
-                          {item.subItems?.map((subItem) => (
-                            <Link
-                            
-                              key={subItem.name}
-                              to={subItem.href}
-className="block px-4 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors"
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                <Link
-  to={item.href}
-  className={`font-sans font-bold tracking-wide px-3 py-2 text-sm transition-colors ${
-    location.pathname === item.href ? 'text-blue-400' : 'text-white'
-  }`}
->
-  {item.name}
-</Link>
-
-
-                  )}
-                </div>
-              ))} */}
+            
              {navigation.map((item) => (
   <div key={item.name} className="relative group">
     {item.hasDropdown ? (
       <div className="relative">
        <button
-  className={`font-sans font-bold tracking-wide px-3 py-2 text-sm transition-colors flex items-center ${
+       style={{fontWeight:600}}
+  className={`font-dind font-normal tracking-wide px-3 py-2 text-sm transition-colors flex items-center ${
     location.pathname.startsWith(item.href) && item.href !== '/'
       ? 'text-blue-400'
       : 'text-white'
@@ -131,9 +86,10 @@ className="block px-4 py-2 text-sm font-semibold text-gray-300 hover:text-white 
           >
             {item.subItems?.map((subItem) => (
               <Link
+              
                 key={subItem.name}
                 to={subItem.href}
-                className="block px-4 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors"
+                className="block px-4 py-2 text-sm font-dind font-normal text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors"
               >
                 {subItem.name}
               </Link>
@@ -142,16 +98,19 @@ className="block px-4 py-2 text-sm font-semibold text-gray-300 hover:text-white 
         )}
       </div>
     ) : (
-      <Link
-        to={item.href}
-        className={`font-sans font-bold tracking-wide px-3 py-2 text-sm transition-colors ${
-          location.pathname === item.href && item.href !== '/'
-            ? 'text-blue-400'
-            : 'text-white'
-        }`}
-      >
-        {item.name}
-      </Link>
+     <Link
+  to={item.href}
+  style={{fontWeight:600}}
+  className={`font-dind font-normal tracking-wide px-3 py-2 text-sm transition-colors ${
+    location.pathname === item.href && item.href !== '/'
+      ? 'text-blue-400'
+      : 'text-white'
+  }`}
+>
+  {item.name}
+</Link>
+
+
     )}
   </div>
 ))}
