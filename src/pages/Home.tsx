@@ -75,21 +75,21 @@ const Home = () => {
       excerpt: "Exploring how artificial intelligence is transforming business operations and decision-making processes.",
       date: "March 15, 2024",
       author: "Sarah Chen",
-      image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png"
+      image: "https://qsort.blob.core.windows.net/media/AI-1.jpg"
     },
     {
       title: "Cloud Migration Best Practices",
       excerpt: "A comprehensive guide to successful cloud migration strategies for enterprise organizations.",
       date: "March 10, 2024",
       author: "Michael Rodriguez",
-      image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png"
+      image: "https://qsort.blob.core.windows.net/media/Cloud.jpg"
     },
     {
       title: "Cybersecurity in the Digital Age",
       excerpt: "Essential security measures every organization needs to protect against evolving cyber threats.",
       date: "March 5, 2024",
       author: "David Kim",
-      image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png"
+      image: "https://qsort.blob.core.windows.net/media/CyberSecurity.jpg"
     }
   ];
 

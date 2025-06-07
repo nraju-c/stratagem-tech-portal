@@ -23,7 +23,7 @@ const Blog = () => {
       author: "Sarah Chen",
       category: "AI & Automation",
       tags: ["AI", "Machine Learning", "Enterprise", "Innovation"],
-      image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png",
+      image: "https://qsort.blob.core.windows.net/media/AI-1.jpg",
       readTime: "8 min read"
     },
     {
@@ -36,7 +36,7 @@ const Blog = () => {
       author: "Michael Rodriguez",
       category: "Cloud Computing",
       tags: ["Cloud", "Migration", "Strategy", "Enterprise"],
-      image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png",
+      image: "https://qsort.blob.core.windows.net/media/Cloud.jpg",
       readTime: "12 min read"
     },
     {
@@ -49,7 +49,7 @@ const Blog = () => {
       author: "David Kim",
       category: "Cybersecurity",
       tags: ["Security", "Cyber Threats", "Protection", "Risk Management"],
-      image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png",
+      image: "https://qsort.blob.core.windows.net/media/CyberSecurity.jpg",
       readTime: "10 min read"
     },
     {
@@ -62,7 +62,7 @@ const Blog = () => {
       author: "Lisa Wang",
       category: "Digital Transformation",
       tags: ["Digital Transformation", "Trends", "Technology", "Strategy"],
-      image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png",
+      image: "https://qsort.blob.core.windows.net/media/Digital Transformation.jpg",
       readTime: "7 min read"
     },
     {
@@ -75,7 +75,7 @@ const Blog = () => {
       author: "Sarah Chen",
       category: "Industry Insights",
       tags: ["Manufacturing", "Automation", "Industry 4.0", "IoT"],
-      image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png",
+      image: "https://qsort.blob.core.windows.net/media/Automation.jpg",
       readTime: "9 min read"
     },
     {
@@ -88,7 +88,7 @@ const Blog = () => {
       author: "Michael Rodriguez",
       category: "Cloud Computing",
       tags: ["Multi-Cloud", "Strategy", "Cost Optimization", "Architecture"],
-      image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png",
+      image: "https://qsort.blob.core.windows.net/media/Multi-Cloud-Migration.png",
       readTime: "11 min read"
     }
   ];

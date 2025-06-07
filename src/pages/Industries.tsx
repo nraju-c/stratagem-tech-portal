@@ -10,63 +10,54 @@ const Industries = () => {
       icon: "💰",
       description: "Digital banking solutions, fintech platforms, and regulatory compliance systems",
       services: ["Core Banking Systems", "Payment Processing", "Risk Management", "Regulatory Compliance"],
-      caseStudy: "Modernized legacy banking infrastructure for 40% faster transaction processing"
     },
     {
       name: "Telecom",
       icon: "📡",
-      description: "Network management, 5G infrastructure, and customer experience platforms",
-      services: ["Network Optimization", "5G Implementation", "Customer Portals", "Billing Systems"],
-      caseStudy: "Deployed nationwide 5G network management system for major carrier"
+      description: "Network management, Cloud infrastructure, and customer experience platforms",
+      services: ["Network Optimization", "Cloud Implementation", "Customer Portals", "Billing Systems"],
     },
     {
       name: "Oil & Gas",
       icon: "⛽",
-      description: "IoT monitoring, predictive maintenance, and supply chain optimization",
-      services: ["Pipeline Monitoring", "Predictive Analytics", "Safety Systems", "Asset Management"],
-      caseStudy: "Reduced operational costs by 25% through predictive maintenance solutions"
+      description: "IoT monitoring, AI RAG Implementation, and supply chain optimization",
+      services: ["AI Automation", "Predictive Analytics", "Safety Systems", "Asset Management"],
     },
     {
       name: "Utilities",
       icon: "⚡",
       description: "Smart grid technology, energy management, and sustainability solutions",
-      services: ["Smart Metering", "Grid Optimization", "Energy Analytics", "Demand Response"],
-      caseStudy: "Implemented smart grid solution serving 2M+ customers with 99.9% uptime"
+      services: ["Smart Metering", "Grid Optimization", "Energy Analytics", "Demand Response"]
     },
     {
       name: "Insurance",
       icon: "🛡️",
       description: "Claims processing automation, risk assessment, and customer portals",
-      services: ["Claims Processing", "Risk Modeling", "Policy Management", "Fraud Detection"],
-      caseStudy: "Automated claims processing reducing review time from days to minutes"
+      services: ["Claims Processing", "Risk Modeling", "Policy Management", "Fraud Detection"]
     },
     {
       name: "Pharma",
       icon: "💊",
       description: "Clinical trial management, regulatory compliance, and drug discovery platforms",
-      services: ["Clinical Data Management", "Regulatory Reporting", "Supply Chain", "R&D Systems"],
-      caseStudy: "Accelerated drug development timelines by 30% through digital transformation"
+      services: ["Clinical Data Management", "Regulatory Reporting", "Supply Chain", "R&D Systems"]
     },
     {
       name: "Healthcare",
       icon: "🏥",
       description: "Electronic health records, telemedicine, and patient management systems",
       services: ["EHR Systems", "Telemedicine Platforms", "Patient Portals", "Medical Imaging"],
-      caseStudy: "Deployed comprehensive EHR system improving patient care for 500K+ patients"
     },
     {
       name: "Retail",
       icon: "🛍️",
       description: "E-commerce platforms, inventory management, and customer experience solutions",
       services: ["E-commerce Development", "Inventory Systems", "POS Solutions", "Customer Analytics"],
-      caseStudy: "Built omnichannel platform increasing online sales by 150%"
     },
     {
       name: "Manufacturing",
       icon: "🏭",
       description: "Industry 4.0 solutions, automation, and quality management systems",
       services: ["Industrial IoT", "Process Automation", "Quality Control", "Supply Chain"],
-      caseStudy: "Implemented smart factory solution improving efficiency by 35%"
     }
   ];
 
@@ -111,9 +102,7 @@ const Industries = () => {
                     </ul>
                   </div>
                   
-                  <div className="p-3 bg-blue-500/10 rounded-lg border border-blue-500/20 mb-4">
-                    <p className="text-blue-300 text-xs font-medium">{industry.caseStudy}</p>
-                  </div>
+                 
                   
                   <Button 
                     variant="outline" 

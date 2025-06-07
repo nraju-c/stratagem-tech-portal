@@ -191,8 +191,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-medium">Email</h4>
-                      <p className="text-gray-300 text-sm">contact@techsolutions.com</p>
-                      <p className="text-gray-300 text-sm">support@techsolutions.com</p>
+                      <p className="text-gray-300 text-sm">contact@qsort.ai</p>
                     </div>
                   </div>
                   
@@ -202,8 +201,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-medium">Phone</h4>
-                      <p className="text-gray-300 text-sm">+1 (555) 123-4567</p>
-                      <p className="text-gray-300 text-sm">+1 (555) 123-4568</p>
+                      <p className="text-gray-300 text-sm">+1 (281)-581-7544</p>
+                     
                     </div>
                   </div>
                   
@@ -214,9 +213,9 @@ const Contact = () => {
                     <div>
                       <h4 className="text-white font-medium">Address</h4>
                       <p className="text-gray-300 text-sm">
-                        123 Technology Drive<br />
-                        Suite 100<br />
-                        Tech City, TC 12345
+                        3200 Wilcrest Dr<br />
+                        Suite 170<br />
+                        Houston, TX 77042
                       </p>
                     </div>
                   </div>
@@ -228,9 +227,8 @@ const Contact = () => {
                     <div>
                       <h4 className="text-white font-medium">Business Hours</h4>
                       <p className="text-gray-300 text-sm">
-                        Monday - Friday: 9:00 AM - 6:00 PM<br />
-                        Saturday: 10:00 AM - 4:00 PM<br />
-                        Sunday: Closed
+                        Monday - Friday: 9:00 AM - 5:00 PM (CST)
+                       
                       </p>
                     </div>
                   </div>
@@ -259,7 +257,7 @@ const Contact = () => {
         </div>
 
         {/* Map Section */}
-        <div className="mt-16">
+        {/* <div className="mt-16">
           <Card className="bg-slate-700/30 border-slate-600 overflow-hidden">
             <CardContent className="p-0">
               <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center">
@@ -277,7 +275,26 @@ const Contact = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
+        <div className="mt-16">
+  <Card className="bg-slate-700/30 border-slate-600 overflow-hidden">
+    <CardContent className="p-0">
+      <div className="aspect-video">
+        <iframe
+          title="Google Map"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          loading="lazy"
+          allowFullScreen
+          referrerPolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=29.7409,-95.55344&z=14&output=embed"
+        />
+      </div>
+    </CardContent>
+  </Card>
+</div>
+
       </div>
     </div>
   );
