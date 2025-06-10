@@ -26,6 +26,10 @@ export default {
 	    dind: ['D-DIN', 'Arial', 'Verdana', 'sans-serif'],
 
   },
+  screens: {
+        'xs': '480px',
+        '2xl': '1536px',
+      },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

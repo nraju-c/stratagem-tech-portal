@@ -1,0 +1,33 @@
+/* custom.css */
+
+@media (max-width: 1024px) {
+  .nav-logo {
+    margin-left: -24px !important;
+  }
+  .nav-menu {
+    gap: 1rem !important; /* reduce nav spacing on iPad/tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    margin-left: 0 !important;
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-nav-toggle {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+  }
+  .nav-menu {
+    gap: 0.5rem !important;
+    flex-wrap: wrap !important;
+  }
+}

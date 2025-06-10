@@ -112,11 +112,11 @@ const IndustriesDetails = () => {
 
         {/* Header */}
         <div className="flex items-start gap-6">
-          <img
+          {/* <img
             src={service.image}
             alt={service.title}
             className="w-20 h-20 object-contain"
-          />
+          /> */}
           <div>
             <h1 className="text-4xl font-extrabold tracking-wide leading-tight mb-2">
               {service.title}

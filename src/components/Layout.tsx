@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import '@/styles/fonts.css';
+import '@/styles/custom.css';
 
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -42,7 +43,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link to="/" className="flex-shrink-0">
-                <div className="flex items-center space-x-2 ml-[-24px] sm:ml-[-82px]">
+                <div className="flex items-center nav-logo">
   <img
     src={logo}
     alt="Logo"
@@ -56,7 +57,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center nav-menu space-x-8 desktop-nav">
             
              {navigation.map((item) => (
   <div key={item.name} className="relative group">
@@ -118,7 +119,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
+            <div className="md:hidden flex items-center mobile-nav-toggle hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-300 hover:text-white"
