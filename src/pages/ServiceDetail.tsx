@@ -12,6 +12,8 @@ const ServiceDetail = () => {
       icon: Settings,
       title: "IT Consulting",
       subtitle: "Strategic Technology Guidance",
+      backgroundImage:'https://qsort.blob.core.windows.net/media/IT-consulting-large.jpg',
+      imageUrl:'https://qsort.blob.core.windows.net/media/IT-Consulting-BOX.jpg',
       description: "Transform your business with expert strategic technology guidance that aligns IT initiatives with business objectives, optimizes digital infrastructure, and drives sustainable growth through innovative solutions.",
       features: [
         {
@@ -65,6 +67,9 @@ const ServiceDetail = () => {
       icon: Cloud,
       title: "Cloud Solutions",
       subtitle: "Scalable Cloud Infrastructure",
+      backgroundImage:'https://qsort.blob.core.windows.net/media/IT-consulting-large1.jpg',
+      imageUrl:'https://qsort.blob.core.windows.net/media/Cloud Solutions-BOX.jpg',
+
       description: "Accelerate your digital transformation with comprehensive cloud solutions that provide scalability, security, and cost-effectiveness while enabling rapid innovation and business agility.",
       features: [
         {
@@ -118,6 +123,8 @@ const ServiceDetail = () => {
       icon: Zap,
       title: "AI & Automation",
       subtitle: "Intelligent Business Solutions",
+      imageUrl:'https://qsort.blob.core.windows.net/media/AI & Automation - BOX.jpg',
+
       description: "Harness the power of artificial intelligence and automation to streamline operations, enhance decision-making, and create intelligent systems that drive business value and competitive advantage.",
       features: [
         {
@@ -171,6 +178,8 @@ const ServiceDetail = () => {
       icon: Code,
       title: "Software Development",
       subtitle: "Custom Software Solutions",
+      imageUrl:'https://qsort.blob.core.windows.net/media/Software Development- BOX.jpg',
+
       description: "Build robust, scalable software solutions tailored to your unique business requirements using cutting-edge technologies and industry best practices for optimal performance and user experience.",
       features: [
         {
@@ -224,6 +233,8 @@ const ServiceDetail = () => {
       icon: Users,
       title: "Technical Project Management",
       subtitle: "Expert Project Leadership",
+      imageUrl:'https://qsort.blob.core.windows.net/media/Project Management- BOX.jpg',
+
       description: "Ensure successful delivery of complex technical initiatives with expert project management that combines technical expertise, proven methodologies, and stakeholder alignment.",
       features: [
         {
@@ -298,11 +309,9 @@ const ServiceDetail = () => {
   return (
     <div className="min-h-screen py-20">
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="py-20" style={{ backgroundImage: `url(${service.backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <IconComponent className="h-10 w-10 text-white" />
-          </div>
+         
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {service.title}
           </h1>
@@ -360,7 +369,12 @@ const ServiceDetail = () => {
             
             <div className="aspect-square bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-600/10"></div>
-              <IconComponent className="w-32 h-32 text-blue-400 relative z-10" />
+               <img
+    src={service.imageUrl}
+    alt={service.title}
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+              {/* <IconComponent className="w-32 h-32 text-blue-400 relative z-10" /> */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
             </div>
           </div>

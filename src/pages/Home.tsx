@@ -178,7 +178,7 @@ const Home = () => {
     </div>
   </div>
 </section> */}
-<section className="relative pt-12 pb-12 lg:[padding-top:6rem] lg:pb-16 overflow-hidden">
+{/* <section className="relative pt-12 pb-12 lg:[padding-top:6rem] lg:pb-16 overflow-hidden">
   <video
     className="absolute inset-0 w-full h-full object-cover"
     autoPlay
@@ -187,10 +187,9 @@ const Home = () => {
     playsInline
     preload="auto"
   >
-        <source src='https://qsort.blob.core.windows.net/media/QSORT_Clip_2.webm
-' type="video/mp4" />
+        <source src='https://qsort.blob.core.windows.net/media/HOME.jpg
+' type="image" />
 
-    {/* <source src='https://qsort.blob.core.windows.net/media/homevideo.mp4' type="video/mp4" /> */}
   </video>
 
 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:pl-8 lg:pr-0">
@@ -231,7 +230,58 @@ const Home = () => {
 
     </div>
   </div>
+</section> */}
+
+<section className="relative pt-12 pb-12 lg:[padding-top:6rem] lg:pb-16 overflow-hidden">
+  {/* Background Image */}
+  <img
+    src="https://qsort.blob.core.windows.net/media/HOME.jpg"
+    alt="Background"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:pl-8 lg:pr-0">
+    <div className="flex justify-end">
+      <div className="w-full max-w-[36rem] ml-[7rem] text-left">
+
+        <h1
+          style={{ fontSize: '3.15rem' }}
+          className="font-bold text-white mb-6 animate-fade-in leading-tight font-dind max-w-[36rem] break-words uppercase"
+        >
+          Transforming Vision into{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+            Digital Reality
+          </span>
+        </h1>
+
+        <p
+          className="text-lg mb-8 leading-relaxed animate-fade-in"
+          style={{ color: 'white' }}
+        >
+          Unleash the power of innovation with a strategic partner that redefines what's possible.
+          We specialize in accelerating business transformation through AI, cloud computing, data engineering,
+          cybersecurity, and emerging tech solutions. Our future-ready approach bridges the gap between
+          legacy infrastructure and intelligent digital ecosystems—empowering enterprises to evolve,
+          adapt, and lead in a rapidly shifting world.
+        </p>
+
+        <div className="flex justify-center animate-fade-in">
+          <Link to="/contact">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-lg px-8 py-3 font-dind"
+            >
+              Get Started Today
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </section>
+
 
 
 

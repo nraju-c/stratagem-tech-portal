@@ -56,7 +56,7 @@ const About = () => {
   return (
     <div className="min-h-screen py-20">
       {/* Hero Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-dind  break-words ">
             About QSORT
@@ -68,7 +68,27 @@ const About = () => {
             challenges and practical business outcomes.
           </p>
         </div>
-      </section>
+      </section> */}
+
+      <section
+  className="py-20 bg-cover  bg-no-repeat bg-top"
+  style={{
+    backgroundImage: "url('https://qsort.blob.core.windows.net/media/About Us.jpg')"
+  }}
+>
+  <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-dind break-words">
+      About QSORT
+    </h1>
+    <p className="text-xl text-gray-300 leading-relaxed">
+      We are a forward-thinking IT services company dedicated to empowering businesses 
+      through innovative technology solutions. Founded on the principle that technology 
+      should be a catalyst for growth, we bridge the gap between complex technological 
+      challenges and practical business outcomes.
+    </p>
+  </div>
+</section>
+
 
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-slate-800/50">

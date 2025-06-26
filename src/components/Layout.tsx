@@ -171,7 +171,7 @@ className={`block px-3 py-2 text-base font-bold tracking-wide transition-colors 
               </div>
 
               <p className="text-gray-400 text-sm">
-                Transforming Vision into Digital Reality through innovative technology solutions.
+                QSORT is a technology solutions provider dedicated to helping businesses streamline operations, enhance cybersecurity, and drive digital transformation. Founded with a mission to deliver reliable, scalable, and innovative IT solutions. Serving small to large sized businesses across a range of industries, QSORT stands out for its commitment to client success, rapid response times, and deep technical expertise. Our team of professionals works closely with each client to understand their unique challenges and build customized technology strategies that support long term growth and resilience.
               </p>
             </div>
             
