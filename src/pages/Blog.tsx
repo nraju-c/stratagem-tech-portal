@@ -5,8 +5,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import Aiblog from '../../public/Ai in Enterpisesblog.jpg';
-import cloudblog from '../../public/Cloud Migrationblog.jpg'
+import Aiblog from '../../public/aiinte.jpg';
+import cloudblog from '../../public/cloudinter.jpg'
 
 import digitaltransformation from '../../public/Digital Trendsblog.jpg';
 import robot from '../../public/Robust Manufacturingblog.jpg';

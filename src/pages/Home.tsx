@@ -5,8 +5,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import '@/styles/fonts.css';
 import pic from '../../public/pic1.jpg'
-import ins1 from '../../public/Ai in Enterprise.png'
-import ins2 from '../../public/Cloud Migration.png'
+import ins1 from '../../public/Ai in Enterprise.jpg'
+import ins2 from '../../public/Cloud Migration.jpg'
 
 const Home = () => {
   const services = [
