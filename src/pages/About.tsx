@@ -63,7 +63,7 @@ const About = () => {
     <section
   className="py-20 bg-no-repeat bg-cover bg-center"
   style={{
-    backgroundImage: "url('https://qsort.blob.core.windows.net/media/aboutus.png')",
+    backgroundImage: "url('https://qsort.blob.core.windows.net/media/aboutus.png')"
   }}
 >
   <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 py-12 rounded-lg">

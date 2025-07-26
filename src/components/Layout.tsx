@@ -48,7 +48,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     src={logo}
     alt="Logo"
     className="h-90 w-auto sm:h-90"
-  style={{height:360}}
+  style={{height:360,marginLeft:-76}}
   />
 </div>
 
