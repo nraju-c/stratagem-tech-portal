@@ -27,12 +27,11 @@ const Blog = () => {
       title: "The Future of AI in Enterprise Solutions",
       excerpt: "Exploring how artificial intelligence is transforming business operations and decision-making processes across industries.",
       content: "Full article content would go here...",
-      date: "March 15, 2024",
-      author: "Sarah Chen",
+    
       category: "AI & Automation",
       tags: ["AI", "Machine Learning", "Enterprise", "Innovation"],
       image: Aiblog,
-      readTime: "8 min read"
+      
     },
     {
       id: 2,
@@ -40,12 +39,11 @@ const Blog = () => {
       title: "Cloud Migration Best Practices for Enterprise Organizations",
       excerpt: "A comprehensive guide to successful cloud migration strategies, common pitfalls, and optimization techniques.",
       content: "Full article content would go here...",
-      date: "March 10, 2024",
-      author: "Michael Rodriguez",
+    
       category: "Cloud Computing",
       tags: ["Cloud", "Migration", "Strategy", "Enterprise"],
       image: cloudblog,
-      readTime: "12 min read"
+    
     },
     {
       id: 3,
@@ -53,12 +51,11 @@ const Blog = () => {
       title: "Cybersecurity in the Digital Age: Protecting Your Business",
       excerpt: "Essential security measures every organization needs to protect against evolving cyber threats.",
       content: "Full article content would go here...",
-      date: "March 5, 2024",
-      author: "David Kim",
+     
       category: "Cybersecurity",
       tags: ["Security", "Cyber Threats", "Protection", "Risk Management"],
       image: "https://qsort.blob.core.windows.net/media/CyberSecurity.jpg",
-      readTime: "10 min read"
+     
     },
     {
       id: 4,
@@ -66,12 +63,11 @@ const Blog = () => {
       title: "Digital Transformation Trends Shaping 2024",
       excerpt: "Key technology trends that will define digital transformation strategies in the coming year.",
       content: "Full article content would go here...",
-      date: "February 28, 2024",
-      author: "Lisa Wang",
+   
       category: "Digital Transformation",
       tags: ["Digital Transformation", "Trends", "Technology", "Strategy"],
       image: digitaltransformation,
-      readTime: "7 min read"
+     
     },
     {
       id: 5,
@@ -79,12 +75,11 @@ const Blog = () => {
       title: "How Automation is Revolutionizing the Manufacturing Industry",
       excerpt: "Industry 4.0 technologies are transforming manufacturing processes and improving operational efficiency.",
       content: "Full article content would go here...",
-      date: "February 20, 2024",
-      author: "Sarah Chen",
+    
       category: "Industry Insights",
       tags: ["Manufacturing", "Automation", "Industry 4.0", "IoT"],
       image: robot,
-      readTime: "9 min read"
+      
     },
     {
       id: 6,
@@ -92,12 +87,11 @@ const Blog = () => {
       title: "Building a Robust Multi-Cloud Strategy",
       excerpt: "Learn how to leverage multiple cloud providers for enhanced reliability, performance, and cost optimization.",
       content: "Full article content would go here...",
-      date: "February 15, 2024",
-      author: "Michael Rodriguez",
+    
       category: "Cloud Computing",
       tags: ["Multi-Cloud", "Strategy", "Cost Optimization", "Architecture"],
       image: multicloud,
-      readTime: "11 min read"
+     
     }
   ];
 
@@ -229,7 +223,7 @@ const Blog = () => {
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-xs">{post.readTime}</span>
+                    {/* <span className="text-gray-400 text-xs">{post.readTime}</span> */}
                     <Link 
                       to={`/blog/${post.slug}`}
                       className="text-blue-400 hover:text-blue-300 text-sm font-medium"
