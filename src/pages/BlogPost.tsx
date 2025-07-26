@@ -419,7 +419,7 @@ const handleBack = () => {
        <div className="flex justify-end px-6">
   <button
     onClick={handleBack}
-    className="inline-flex items-center gap-2 text-sm text-white border border-slate-600 px-5 py-2 rounded-full hover:text-blue-400 hover:border-blue-400 transition-colors"
+    className="inline-flex items-center gap-2 text-sm text-white border border-white px-5 py-2 rounded-full hover:text-blue-400 hover:border-blue-400 transition-colors"
   >
     <ArrowLeft className="w-4 h-4" />
     Back to Blog

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 const Services = () => {
   const services = [
     {
+      image:'',
       id: 'consulting',
       icon: Settings,
       title: "IT Consulting",
@@ -141,13 +142,16 @@ const Services = () => {
                     </Card>
                   </div>
                   
-                  <div className={isEven ? 'lg:order-2' : 'lg:order-1'}>
-                    <div className="aspect-square bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-600/10"></div>
-                      <IconComponent className="w-32 h-32 text-blue-400 relative z-10" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
-                    </div>
-                  </div>
+    <div className={isEven ? 'lg:order-2' : 'lg:order-1'}>
+  <div
+    className="aspect-square rounded-2xl bg-cover bg-center bg-no-repeat shadow-xl"
+    style={{ backgroundImage: `url(${service.image})` }}
+  >
+    <div className="w-full h-full rounded-2xl bg-black/40 hover:bg-black/10 transition-all duration-300" />
+  </div>
+</div>
+
+
                 </div>
               );
             })}
