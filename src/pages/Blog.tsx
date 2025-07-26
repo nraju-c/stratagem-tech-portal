@@ -5,6 +5,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import Aiblog from '../../public/Ai in Enterpisesblog.jpg';
+import cloudblog from '../../public/Cloud Migrationblog.jpg'
+
+import digitaltransformation from '../../public/Digital Trendsblog.jpg';
+import robot from '../../public/Robust Manufacturingblog.jpg';
+import multicloud from '../../public/Multi Cloud strategyblog.jpg'
+
 
 
 const Blog = () => {
@@ -24,7 +31,7 @@ const Blog = () => {
       author: "Sarah Chen",
       category: "AI & Automation",
       tags: ["AI", "Machine Learning", "Enterprise", "Innovation"],
-      image: "https://qsort.blob.core.windows.net/media/AI-1.jpg",
+      image: Aiblog,
       readTime: "8 min read"
     },
     {
@@ -37,7 +44,7 @@ const Blog = () => {
       author: "Michael Rodriguez",
       category: "Cloud Computing",
       tags: ["Cloud", "Migration", "Strategy", "Enterprise"],
-      image: "https://qsort.blob.core.windows.net/media/Cloud.jpg",
+      image: cloudblog,
       readTime: "12 min read"
     },
     {
@@ -63,7 +70,7 @@ const Blog = () => {
       author: "Lisa Wang",
       category: "Digital Transformation",
       tags: ["Digital Transformation", "Trends", "Technology", "Strategy"],
-      image: "https://qsort.blob.core.windows.net/media/Digital Transformation.jpg",
+      image: digitaltransformation,
       readTime: "7 min read"
     },
     {
@@ -76,7 +83,7 @@ const Blog = () => {
       author: "Sarah Chen",
       category: "Industry Insights",
       tags: ["Manufacturing", "Automation", "Industry 4.0", "IoT"],
-      image: "https://qsort.blob.core.windows.net/media/Automation.jpg",
+      image: robot,
       readTime: "9 min read"
     },
     {
@@ -89,7 +96,7 @@ const Blog = () => {
       author: "Michael Rodriguez",
       category: "Cloud Computing",
       tags: ["Multi-Cloud", "Strategy", "Cost Optimization", "Architecture"],
-      image: "https://qsort.blob.core.windows.net/media/Multi-Cloud-Migration.png",
+      image: multicloud,
       readTime: "11 min read"
     }
   ];

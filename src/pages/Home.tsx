@@ -4,7 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import '@/styles/fonts.css';
-
+import pic from '../../public/pic1.jpg'
+import ins1 from '../../public/Ai in Enterprise.png'
+import ins2 from '../../public/Cloud Migration.png'
 
 const Home = () => {
   const services = [
@@ -75,14 +77,14 @@ const Home = () => {
       excerpt: "Exploring how artificial intelligence is transforming business operations and decision-making processes.",
       date: "March 15, 2024",
       author: "Sarah Chen",
-      image: "https://qsort.blob.core.windows.net/media/AI-1.jpg"
+      image: ins1
     },
     {
       title: "Cloud Migration Best Practices",
       excerpt: "A comprehensive guide to successful cloud migration strategies for enterprise organizations.",
       date: "March 10, 2024",
       author: "Michael Rodriguez",
-      image: "https://qsort.blob.core.windows.net/media/Cloud.jpg"
+      image: ins2
     },
     {
       title: "Cybersecurity in the Digital Age",
@@ -235,7 +237,7 @@ const Home = () => {
 <section className="relative pt-12 pb-12 lg:[padding-top:6rem] lg:pb-16 overflow-hidden">
   {/* Background Image */}
   <img
-    src="https://qsort.blob.core.windows.net/media/HOME.jpg"
+    src={pic}
     alt="Background"
     className="absolute inset-0 w-full h-full object-cover"
   />

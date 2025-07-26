@@ -3,6 +3,14 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Settings, Cloud, Code, Users, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import IT from "../../public/IT Consulting.jpg";
+import cloud from "../../public/Cloud Solutions.jpg";
+import AI from "../../public/Ai & Automation.jpg";
+import softwareDevelopment from "../../public/Software development.jpg";
+import projectManagement from "../../public/Project managemant.jpg"
+
+
+
 
 const ServiceDetail = () => {
   const { serviceType } = useParams<{ serviceType: string }>();
@@ -12,8 +20,8 @@ const ServiceDetail = () => {
       icon: Settings,
       title: "IT Consulting",
       subtitle: "Strategic Technology Guidance",
-      backgroundImage:'https://qsort.blob.core.windows.net/media/IT-consulting-large.jpg',
-      imageUrl:'https://qsort.blob.core.windows.net/media/IT-Consulting-BOX.jpg',
+      // backgroundImage:'https://qsort.blob.core.windows.net/media/IT-consulting-large.jpg',
+      imageUrl:IT,
       description: "Transform your business with expert strategic technology guidance that aligns IT initiatives with business objectives, optimizes digital infrastructure, and drives sustainable growth through innovative solutions.",
       features: [
         {
@@ -67,8 +75,8 @@ const ServiceDetail = () => {
       icon: Cloud,
       title: "Cloud Solutions",
       subtitle: "Scalable Cloud Infrastructure",
-      backgroundImage:'https://qsort.blob.core.windows.net/media/IT-consulting-large1.jpg',
-      imageUrl:'https://qsort.blob.core.windows.net/media/Cloud Solutions-BOX.jpg',
+      // backgroundImage:'https://qsort.blob.core.windows.net/media/IT-consulting-large1.jpg',
+      imageUrl:cloud,
 
       description: "Accelerate your digital transformation with comprehensive cloud solutions that provide scalability, security, and cost-effectiveness while enabling rapid innovation and business agility.",
       features: [
@@ -123,7 +131,7 @@ const ServiceDetail = () => {
       icon: Zap,
       title: "AI & Automation",
       subtitle: "Intelligent Business Solutions",
-      imageUrl:'https://qsort.blob.core.windows.net/media/AI & Automation - BOX.jpg',
+      imageUrl:AI,
 
       description: "Harness the power of artificial intelligence and automation to streamline operations, enhance decision-making, and create intelligent systems that drive business value and competitive advantage.",
       features: [
@@ -178,7 +186,7 @@ const ServiceDetail = () => {
       icon: Code,
       title: "Software Development",
       subtitle: "Custom Software Solutions",
-      imageUrl:'https://qsort.blob.core.windows.net/media/Software Development- BOX.jpg',
+      imageUrl:softwareDevelopment,
 
       description: "Build robust, scalable software solutions tailored to your unique business requirements using cutting-edge technologies and industry best practices for optimal performance and user experience.",
       features: [
@@ -233,7 +241,7 @@ const ServiceDetail = () => {
       icon: Users,
       title: "Technical Project Management",
       subtitle: "Expert Project Leadership",
-      imageUrl:'https://qsort.blob.core.windows.net/media/Project Management- BOX.jpg',
+      imageUrl:projectManagement,
 
       description: "Ensure successful delivery of complex technical initiatives with expert project management that combines technical expertise, proven methodologies, and stakeholder alignment.",
       features: [
