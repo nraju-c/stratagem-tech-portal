@@ -1,5 +1,5 @@
 
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Calendar, User, Clock, ArrowLeft, Tag } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -407,16 +407,29 @@ const BlogPost = () => {
   ];
   const { slug } = useParams<{ slug: string }>();
   const blogPost = posts.find(post => post.slug === slug);
+  const navigate = useNavigate();
+  console.log("IndustriesDetails rendered");
+
+const handleBack = () => {
+  navigate('/blog'); // Will go to your /industries route
+};
 
   return (
     <div className="min-h-screen py-20">
+       <div className="flex justify-end px-6">
+  <button
+    onClick={handleBack}
+    className="inline-flex items-center gap-2 text-sm text-white border border-slate-600 px-5 py-2 rounded-full hover:text-blue-400 hover:border-blue-400 transition-colors"
+  >
+    <ArrowLeft className="w-4 h-4" />
+    Back to Blog
+  </button>
+</div>
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Back Button */}
-        <Link to="/blog" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8">
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Blog
-        </Link>
+    
 
         {/* Header */}
         <header className="mb-12">

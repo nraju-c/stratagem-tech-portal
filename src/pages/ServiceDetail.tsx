@@ -1,8 +1,9 @@
 
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Settings, Cloud, Code, Users, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 import IT from "../../public/IT Consulting.jpg";
 import cloud from "../../public/Cloud Solutions.jpg";
 import AI from "../../public/Ai & Automation.jpg";
@@ -14,7 +15,11 @@ import projectManagement from "../../public/Project managemant.jpg"
 
 const ServiceDetail = () => {
   const { serviceType } = useParams<{ serviceType: string }>();
+const navigate = useNavigate();
 
+const handleBack = () => {
+  navigate('/services');
+};
   const serviceData: Record<string, any> = {
     consulting: {
       icon: Settings,
@@ -317,6 +322,17 @@ const ServiceDetail = () => {
   return (
     <div className="min-h-screen py-20">
       {/* Hero Section */}
+  <div className="flex justify-end px-6">
+  <button
+    onClick={handleBack}
+    className="inline-flex items-center gap-2 text-sm text-white border border-slate-600 px-5 py-2 rounded-full hover:text-blue-400 hover:border-blue-400 transition-colors"
+  >
+    <ArrowLeft className="w-4 h-4" />
+    Back to Services
+  </button>
+</div>
+
+
       <section className="py-20" style={{ backgroundImage: `url(${service.backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
          
