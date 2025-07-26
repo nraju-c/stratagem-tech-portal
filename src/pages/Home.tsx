@@ -76,7 +76,7 @@ const Home = () => {
       title: "The Future of AI in Enterprise Solutions",
       excerpt: "Exploring how artificial intelligence is transforming business operations and decision-making processes.",
       date: "March 15, 2024",
-      author: "Sarah Chen",
+     
       image: ins1
     },
     {

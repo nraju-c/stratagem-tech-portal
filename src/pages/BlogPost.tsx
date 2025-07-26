@@ -433,18 +433,9 @@ const BlogPost = () => {
             <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">
               {blogPost.category}
             </span>
-            <div className="flex items-center">
-              <Calendar className="h-4 w-4 mr-1" />
-              {/* {blogPost.date} */}
-            </div>
-            <div className="flex items-center">
-              <User className="h-4 w-4 mr-1" />
-              {/* {blogPost.author.name} */}
-            </div>
-            <div className="flex items-center">
-              <Clock className="h-4 w-4 mr-1" />
-              {/* {blogPost.readTime} */}
-            </div>
+           
+           
+          
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">

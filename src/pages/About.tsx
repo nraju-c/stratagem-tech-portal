@@ -28,7 +28,7 @@ const About = () => {
 
   const team = [
     {
-      name: "Sarah Chen",
+     
       role: "CEO & Founder",
       bio: "15+ years in enterprise technology with expertise in digital transformation and AI strategy.",
       image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png"
