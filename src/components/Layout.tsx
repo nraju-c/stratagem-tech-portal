@@ -42,7 +42,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Link to="/" className="flex-shrink-0">
                 <div className="flex items-center nav-logo">
   <img
     src={logo}
@@ -53,7 +52,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 </div>
 
 
-              </Link>
+          
             </div>
 
             {/* Desktop Navigation */}
