@@ -40,15 +40,15 @@ const BlogPost = () => {
 <p>AI's trajectory in enterprise solutions points toward a future where agility, intelligence, and personalization are not aspirations, they are operational standards. As organizations navigate this transformation, those that embrace AI not as a siloed technology but as a foundational strategy will shape the contours of the intelligent enterprise era.</p>
     `,
 
-    date: "March 15, 2024",
+   
     author: {
-      name: "Sarah Chen",
+    
       bio: "Sarah is our Chief Technology Officer with over 15 years of experience in enterprise AI and digital transformation. She holds a PhD in Computer Science from MIT and has led AI initiatives at Fortune 500 companies.",
       image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png"
     },
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
-    readTime: "8 min read",
+    
     image: "https://qsort.blob.core.windows.net/media/Blog- AI.jpg"
   },
 {
@@ -155,15 +155,15 @@ const BlogPost = () => {
 <p>For enterprise organizations, cloud migration can unlock immense value—but only if approached with the right strategy. By following these best practices, enterprises can mitigate risks, streamline the transition, and lay a strong foundation for innovation and growth in the cloud.</p>
 <p>Whether you're just starting or refining your cloud journey, having a well-documented migration roadmap and a culture of continuous learning will make all the difference.</p>
     `,
-       date: "March 15, 2024",
+      
     author: {
-      name: "Sarah Chen",
+    
       bio: "Sarah is our Chief Technology Officer with over 15 years of experience in enterprise AI and digital transformation. She holds a PhD in Computer Science from MIT and has led AI initiatives at Fortune 500 companies.",
       image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png"
     },
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
-    readTime: "8 min read",
+   
     image: "https://qsort.blob.core.windows.net/media/Blog-Cloud Migration.jpg"
   
   },
@@ -212,15 +212,15 @@ const BlogPost = () => {
 <h2><strong>Conclusion</strong></h2>
 <p>Cybersecurity in the digital age is not just an IT issue—it's a shared responsibility. As we continue to integrate digital tools into every facet of life, prioritizing cybersecurity will be crucial to protecting our data, privacy, and trust. The digital world offers immense opportunities, but only those who are secure can truly reap the benefits.</p>
     `,
-     date: "March 15, 2024",
+    
     author: {
-      name: "Sarah Chen",
+     
       bio: "Sarah is our Chief Technology Officer with over 15 years of experience in enterprise AI and digital transformation. She holds a PhD in Computer Science from MIT and has led AI initiatives at Fortune 500 companies.",
       image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png"
     },
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
-    readTime: "8 min read",
+
     image: "https://qsort.blob.core.windows.net/media/Blog-Cyber Security.jpg"
   },
   {
@@ -263,15 +263,15 @@ const BlogPost = () => {
 <p>Digital transformation is not a one-time project; it's a continuous journey. The organizations that succeed in 2025 and beyond will be those that adapt quickly, prioritize innovation, and stay aligned with evolving technology trends.</p>
 <p>Whether you're a startup or an enterprise, embracing these digital transformation trends can help you future proof your business and unlock new growth opportunities.</p>
 `,
-date: "March 15, 2024",
+
     author: {
-      name: "Sarah Chen",
+   
       bio: "Sarah is our Chief Technology Officer with over 15 years of experience in enterprise AI and digital transformation. She holds a PhD in Computer Science from MIT and has led AI initiatives at Fortune 500 companies.",
       image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png"
     },
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
-    readTime: "8 min read",
+   
     image: "https://qsort.blob.core.windows.net/media/Blog-Digital Transformation.jpg"
   },
 
@@ -304,15 +304,15 @@ date: "March 15, 2024",
 <h2><strong>Conclusion</strong></h2>
 <p>Automation is revolutionizing the manufacturing industry by driving efficiency, enhancing safety, enabling customization, and paving the way for smarter operations. As technology continues to evolve, it promises even greater transformation—but success will depend on how well industries manage the transition and empower their workforce to adapt. The factories of the future are not just automated; they are intelligent, agile, and human-centric.</p>
 `,
-date: "March 15, 2024",
+
     author: {
-      name: "Sarah Chen",
+     
       bio: "Sarah is our Chief Technology Officer with over 15 years of experience in enterprise AI and digital transformation. She holds a PhD in Computer Science from MIT and has led AI initiatives at Fortune 500 companies.",
       image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png"
     },
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
-    readTime: "8 min read",
+ 
     image: "https://qsort.blob.core.windows.net/media/Blog-Automation.jpg"
   },
    {
@@ -371,15 +371,15 @@ date: "March 15, 2024",
 <h2><strong>Conclusion</strong></h2>
 <p>A robust multi-cloud strategy enables organizations to become more agile, resilient, and competitive in the digital era. However, its success depends on deliberate planning, sound architecture, and continuous governance. By adopting the best practices and aligning cloud initiatives with business goals, organizations can unlock the full potential of a multi-cloud ecosystem—transforming technology into a true business enabler.</p>
 `,
-date: "March 15, 2024",
+
     author: {
-      name: "Sarah Chen",
+    
       bio: "Sarah is our Chief Technology Officer with over 15 years of experience in enterprise AI and digital transformation. She holds a PhD in Computer Science from MIT and has led AI initiatives at Fortune 500 companies.",
       image: "/lovable-uploads/b189853c-5b4f-4181-aa8d-63fd410ac59c.png"
     },
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
-    readTime: "8 min read",
+   
     image: "https://qsort.blob.core.windows.net/media/Blog-Multi Cloud.jpg"
   }
 
@@ -435,15 +435,15 @@ date: "March 15, 2024",
             </span>
             <div className="flex items-center">
               <Calendar className="h-4 w-4 mr-1" />
-              {blogPost.date}
+              {/* {blogPost.date} */}
             </div>
             <div className="flex items-center">
               <User className="h-4 w-4 mr-1" />
-              {blogPost.author.name}
+              {/* {blogPost.author.name} */}
             </div>
             <div className="flex items-center">
               <Clock className="h-4 w-4 mr-1" />
-              {blogPost.readTime}
+              {/* {blogPost.readTime} */}
             </div>
           </div>
           
