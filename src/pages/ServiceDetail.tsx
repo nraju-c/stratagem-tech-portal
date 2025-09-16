@@ -25,7 +25,7 @@ const handleBack = () => {
       icon: Settings,
       title: "IT Consulting",
       subtitle: "Strategic Technology Guidance",
-      // backgroundImage:'https://qsort.blob.core.windows.net/media/IT-consulting-large.jpg',
+      backgroundImage:'https://qsort.blob.core.windows.net/media/IT%20ConsultantServices.jpg',
       imageUrl:IT,
       description: "Transform your business with expert strategic technology guidance that aligns IT initiatives with business objectives, optimizes digital infrastructure, and drives sustainable growth through innovative solutions.",
       features: [
@@ -80,7 +80,7 @@ const handleBack = () => {
       icon: Cloud,
       title: "Cloud Solutions",
       subtitle: "Scalable Cloud Infrastructure",
-      // backgroundImage:'https://qsort.blob.core.windows.net/media/IT-consulting-large1.jpg',
+      backgroundImage:'https://qsort.blob.core.windows.net/media/Q%20sort%20-%20CloudService.jpg',
       imageUrl:cloud,
 
       description: "Accelerate your digital transformation with comprehensive cloud solutions that provide scalability, security, and cost-effectiveness while enabling rapid innovation and business agility.",
@@ -137,6 +137,7 @@ const handleBack = () => {
       title: "AI & Automation",
       subtitle: "Intelligent Business Solutions",
       imageUrl:AI,
+      backgroundImage:'https://qsort.blob.core.windows.net/media/Ai%20and%20AutomationService.jpg',
 
       description: "Harness the power of artificial intelligence and automation to streamline operations, enhance decision-making, and create intelligent systems that drive business value and competitive advantage.",
       features: [
@@ -192,6 +193,7 @@ const handleBack = () => {
       title: "Software Development",
       subtitle: "Custom Software Solutions",
       imageUrl:softwareDevelopment,
+      backgroundImage:'https://qsort.blob.core.windows.net/media/Software%20Developmentservices.jpg',
 
       description: "Build robust, scalable software solutions tailored to your unique business requirements using cutting-edge technologies and industry best practices for optimal performance and user experience.",
       features: [
@@ -247,6 +249,7 @@ const handleBack = () => {
       title: "Technical Project Management",
       subtitle: "Expert Project Leadership",
       imageUrl:projectManagement,
+      backgroundImage:'https://qsort.blob.core.windows.net/media/Q%20sort%20-%20Project%20ManagemantService.jpg',
 
       description: "Ensure successful delivery of complex technical initiatives with expert project management that combines technical expertise, proven methodologies, and stakeholder alignment.",
       features: [
@@ -320,31 +323,44 @@ const handleBack = () => {
   const IconComponent = service.icon;
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
-  <div className="flex justify-end px-6">
-  <button
-    onClick={handleBack}
-    className="inline-flex items-center gap-2 text-sm text-white border border-white px-5 py-2 rounded-full hover:text-blue-400 hover:border-blue-400 transition-colors"
-  >
-    <ArrowLeft className="w-4 h-4" />
-    Back to Services
-  </button>
-</div>
+  
+
+<section
+  className="relative bg-cover  min-h-[260px]" // 👈 increased height from 400px → 500px
+  style={{
+    backgroundImage: `url('${service.backgroundImage}')`,
+    backgroundRepeat: 'no-repeat',
+  }}
+>
+  <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">
+    <div className="max-w-[45rem] w-full" style={{marginTop:30}}>
+      {/* Title + Button row */}
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-white">
+          {service.title}
+        </h1>
+        <button
+          onClick={handleBack}
+          className="inline-flex items-center gap-2 text-sm text-white border border-white px-5 py-2 rounded-full hover:text-blue-400 hover:border-blue-400 transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Services
+        </button>
+      </div>
+
+      {/* Subtitle + Description */}
+      <p className="text-xl text-blue-400 mb-6">{service.subtitle}</p>
+      <p className="text-lg text-gray-300 leading-relaxed">
+        {service.description}
+      </p>
+    </div>
+  </div>
+</section>
 
 
-      <section className="py-20" style={{ backgroundImage: `url(${service.backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-         
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            {service.title}
-          </h1>
-          <p className="text-xl text-blue-400 mb-6">{service.subtitle}</p>
-          <p className="text-lg text-gray-300 leading-relaxed">
-            {service.description}
-          </p>
-        </div>
-      </section>
+
 
       {/* Key Features */}
       <section className="py-20 bg-slate-800/50">

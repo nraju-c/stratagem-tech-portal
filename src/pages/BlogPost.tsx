@@ -3,12 +3,14 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Calendar, User, Clock, ArrowLeft, Tag } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import React from 'react';
 
 
 const BlogPost = () => {
   
   // In a real application, this would fetch data based on the slug
-  const posts = [{
+  const posts = [
+    {
     title: "The Future of AI in Enterprise Solutions",
     slug: "future-of-ai-enterprise",
     content: `
@@ -49,7 +51,7 @@ const BlogPost = () => {
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
     
-    image: "https://qsort.blob.core.windows.net/media/Blog- AI.jpg"
+    image: "https://qsort.blob.core.windows.net/media/AI%20&%20Automation%20-%20BOX.jpg"
   },
 {
     id: 2,
@@ -163,8 +165,7 @@ const BlogPost = () => {
     },
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
-   
-    image: "https://qsort.blob.core.windows.net/media/Blog-Cloud Migration.jpg"
+  image: 'https://qsort.blob.core.windows.net/media/Cloud%20migrationBlog.jpg'
   
   },
    {
@@ -221,7 +222,7 @@ const BlogPost = () => {
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
 
-    image: "https://qsort.blob.core.windows.net/media/Blog-Cyber Security.jpg"
+    image: "https://qsort.blob.core.windows.net/media/Cyber%20SecurityBlog.jpg"
   },
   {
     id: 4,
@@ -272,7 +273,7 @@ const BlogPost = () => {
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
    
-    image: "https://qsort.blob.core.windows.net/media/Blog-Digital Transformation.jpg"
+    image: "https://qsort.blob.core.windows.net/media/Digital%20transformationBlog.jpg"
   },
 
   {
@@ -313,7 +314,7 @@ const BlogPost = () => {
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
  
-    image: "https://qsort.blob.core.windows.net/media/Blog-Automation.jpg"
+    image: "https://qsort.blob.core.windows.net/media/blogRevol.jpg"
   },
    {
     id: 6,
@@ -380,7 +381,8 @@ const BlogPost = () => {
     category: "AI & Automation",
     tags: ["AI", "Machine Learning", "Enterprise", "Digital Transformation", "Innovation"],
    
-    image: "https://qsort.blob.core.windows.net/media/Blog-Multi Cloud.jpg"
+       image: "https://qsort.blob.core.windows.net/media/Multi%20CloudBlog.jpg"
+
   }
 
 ];
@@ -413,6 +415,8 @@ const BlogPost = () => {
 const handleBack = () => {
   navigate('/blog'); // Will go to your /industries route
 };
+// Group blogPost.content into sections by <h2>
+
 
   return (
     <div className="min-h-screen py-20">
@@ -466,33 +470,37 @@ const handleBack = () => {
         </header>
 
         {/* Content */}
-        <article className="prose prose-invert prose-lg max-w-none mb-16">
+        {/* <article className="prose prose-invert prose-lg max-w-none mb-16">
           <div 
             className="text-gray-300 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: blogPost.content }}
           />
-        </article>
+        </article> */}
+<article
+  className="
+    prose prose-lg max-w-none mb-16 text-white
+    prose-headings:text-white prose-headings:font-bold
+    prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+    prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
+    prose-p:my-4 prose-p:leading-relaxed prose-p:text-white
+    prose-li:my-2 prose-li:text-white prose-li:marker:text-blue-400
+    prose-strong:text-blue-400
+  "
+>
+  <div
+    className="
+      space-y-8
+      [&>h2]:bg-slate-800 [&>h2]:px-6 [&>h2]:py-4 [&>h2]:rounded-lg [&>h2]:border [&>h2]:border-slate-700
+      [&>h2+*]:px-6 [&>h2+*]:pb-6
+    "
+    dangerouslySetInnerHTML={{ __html: blogPost.content }}
+  />
+</article>
 
-        {/* Author Bio */}
-        {/* <Card className="bg-slate-700/30 border-slate-600 mb-16">
-          <CardContent className="p-8">
-            <div className="flex items-start space-x-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full overflow-hidden flex-shrink-0">
-                <img 
-                  src={blogPost.author.image} 
-                  alt={blogPost.author.name}
-                  className="w-full h-full object-cover opacity-80"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">About {blogPost.author.name}</h3>
-                <p className="text-gray-300 leading-relaxed">{blogPost.author.bio}</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card> */}
 
-        {/* Related Posts */}
+
+
+      
         <section>
           <h2 className="text-3xl font-bold text-white mb-8">Related Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -514,29 +522,7 @@ const handleBack = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        {/* <div className="mt-16 text-center">
-          <Card className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Let's discuss how our AI and automation solutions can drive innovation and efficiency in your organization.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
-                  <Button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600">
-                    Schedule Consultation
-                  </Button>
-                </Link>
-                <Link to="/services/ai">
-                  <Button variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white">
-                    Learn About Our AI Services
-                  </Button>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
-        </div> */}
+      
       </div>
     </div>
   );

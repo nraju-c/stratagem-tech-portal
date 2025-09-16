@@ -104,19 +104,27 @@ const Blog = () => {
   });
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen ">
       {/* Hero Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Technology Insights & Trends
-          </h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            Stay ahead of the curve with expert insights, industry analysis, and practical guides 
-            on the latest technology trends transforming businesses worldwide.
-          </p>
-        </div>
-      </section>
+    <section
+  className="relative bg-cover bg-center min-h-[400px]"
+  style={{
+    backgroundImage: "url('https://qsort.blob.core.windows.net/media/Blog%20header.jpg')", // 👈 replace with your background image
+  }}
+>
+  <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">
+    <div className="max-w-[29rem]  mt-20">
+      <h1 className="text-4xl md:text-5xl font-bold text-white">
+        Technology Insights &amp; Trends
+      </h1>
+      <p className="text-xl text-gray-300 leading-relaxed mt-[50px]">
+        Stay ahead of the curve with expert insights, industry analysis, and
+        practical guides on the latest technology trends transforming businesses
+        worldwide.
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* Search and Filter */}
       <section className="py-10 bg-slate-800/50">

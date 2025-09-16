@@ -140,19 +140,29 @@ const Careers = () => {
   };
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen ">
       {/* Hero Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Join Our Team
-          </h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            Build the future of technology with us. We're looking for passionate, innovative professionals 
-            who want to make a real impact in the world of digital transformation.
-          </p>
-        </div>
-      </section>
+ <section
+  className="relative bg-cover bg-center min-h-[400px]"
+  style={{
+    backgroundImage: "url('https://qsort.blob.core.windows.net/media/CareersFinal.jpg')", // 👈 replace with your own
+  }}
+>
+  <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">
+    <div className="max-w-[29rem]  mt-20">
+      <h1 className="text-4xl md:text-5xl font-bold text-white">
+        Join Our Team
+      </h1>
+      <p className="text-xl text-gray-300 leading-relaxed mt-[50px]">
+        Build the future of technology with us. We're looking for passionate,
+        innovative professionals who want to make a real impact in the world of
+        digital transformation.
+      </p>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Company Culture */}
       <section className="py-20 bg-slate-800/50">

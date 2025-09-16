@@ -62,20 +62,31 @@ const Industries = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen ">
       {/* Hero Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-dind">
-            Industries We Serve
-          </h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            Delivering specialized technology solutions across diverse industry verticals, 
-            each tailored to meet unique regulatory requirements, operational challenges, 
-            and business objectives that drive sustainable growth and innovation.
-          </p>
-        </div>
-      </section>
+     <section
+  className="relative bg-cover  min-h-[360px]" // 👈 changed bg-center → bg-right
+  style={{
+    backgroundImage:
+      "url('https://qsort.blob.core.windows.net/media/IndustriesFinal.jpg')",
+  }}
+>
+  <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">
+    <div className="max-w-[29rem]  mt-20">
+      <h1 className="text-4xl md:text-5xl font-bold text-white font-dind">
+        Industries We Serve
+      </h1>
+      <p className="text-xl text-gray-300 leading-relaxed mt-[50px]">
+        Delivering specialized technology solutions across diverse industry
+        verticals, each tailored to meet unique regulatory requirements,
+        operational challenges, and business objectives that drive sustainable
+        growth and innovation.
+      </p>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Industries Grid */}
       <section className="py-20">

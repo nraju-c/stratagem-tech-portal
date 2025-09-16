@@ -80,20 +80,29 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20" 
-  >
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            Comprehensive technology solutions designed to accelerate your digital transformation 
-            journey and drive sustainable business growth through innovative, future-ready approaches.
-          </p>
-        </div>
-      </section>
+   <section
+  className="relative bg-cover  min-h-[350px]"  // 👈 changed bg-center → bg-right
+  style={{
+    backgroundImage:
+      "url('https://qsort.blob.core.windows.net/media/Q%20sort%20-%20ServicesFinal.jpg')",
+  }}
+>
+  <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">
+    <div className="max-w-[29rem] mt-8">
+      <h1 className="text-4xl md:text-5xl font-bold text-white">
+        Our Services
+      </h1>
+      <p className="text-xl text-gray-300 leading-relaxed mt-[50px]">
+        Comprehensive technology solutions designed to accelerate your digital
+        transformation journey and drive sustainable business growth through
+        innovative, future-ready approaches.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Services Grid */}
       <section className="py-20">
