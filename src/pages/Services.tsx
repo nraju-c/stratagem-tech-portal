@@ -164,7 +164,7 @@ const Services = () => {
     className="aspect-square rounded-2xl bg-cover bg-center bg-no-repeat shadow-xl"
     style={{ backgroundImage: `url(${service.image})` }}
   >
-    <div className="w-full h-full rounded-2xl bg-black/40 hover:bg-black/10 transition-all duration-300" />
+    <div className="w-full h-full rounded-2xl " />
   </div>
 </div>
 
