@@ -61,21 +61,24 @@ const About = () => {
       
 
     <section
-  className="py-20 bg-no-repeat bg-cover bg-center"
+        className="relative bg-cover bg-center min-h-[350px]"
   style={{
-    backgroundImage: "url('https://qsort.blob.core.windows.net/media/aboutus.png')"
+    backgroundImage: "url('https://qsort.blob.core.windows.net/media/AboutUsMainF.jpg')"
   }}
 >
-  <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 py-12 rounded-lg">
-    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-dind break-words">
+        <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">
+                    <div className="max-w-[29rem]  mt-8">
+
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
       About QSORT
     </h1>
-    <p className="text-xl text-gray-300 leading-relaxed">
+            <p className="text-xl text-gray-300 leading-relaxed mt-[50px]">
       We are a forward-thinking IT services company dedicated to empowering businesses 
       through innovative technology solutions. Founded on the principle that technology 
       should be a catalyst for growth, we bridge the gap between complex technological 
       challenges and practical business outcomes.
     </p>
+  </div>
   </div>
 </section>
 

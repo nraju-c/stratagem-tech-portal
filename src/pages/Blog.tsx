@@ -1,130 +1,139 @@
+import { useState } from "react";
+import { Search, Calendar, User, Tag } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import Aiblog from "../../public/aiinte.jpg";
+import cloudblog from "../../public/cloudinter.jpg";
 
-import { useState } from 'react';
-import { Search, Calendar, User, Tag } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import Aiblog from '../../public/aiinte.jpg';
-import cloudblog from '../../public/cloudinter.jpg'
-
-import digitaltransformation from '../../public/Digital Trendsblog.jpg';
-import robot from '../../public/Robust Manufacturingblog.jpg';
-import multicloud from '../../public/Multi Cloud strategyblog.jpg'
-
-
+import digitaltransformation from "../../public/Digital Trendsblog.jpg";
+import robot from "../../public/Robust Manufacturingblog.jpg";
+import multicloud from "../../public/Multi Cloud strategyblog.jpg";
 
 const Blog = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ['All', 'AI & Automation', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Industry Insights'];
+  const categories = [
+    "All",
+    "AI & Automation",
+    "Cloud Computing",
+    "Cybersecurity",
+    "Digital Transformation",
+    "Industry Insights",
+  ];
 
   const blogPosts = [
     {
       id: 1,
-      slug: 'future-of-ai-enterprise',
+      slug: "future-of-ai-enterprise",
       title: "The Future of AI in Enterprise Solutions",
-      excerpt: "Exploring how artificial intelligence is transforming business operations and decision-making processes across industries.",
+      excerpt:
+        "Exploring how artificial intelligence is transforming business operations and decision-making processes across industries.",
       content: "Full article content would go here...",
-    
+
       category: "AI & Automation",
       tags: ["AI", "Machine Learning", "Enterprise", "Innovation"],
       image: Aiblog,
-      
     },
     {
       id: 2,
-      slug: 'cloud-migration-best-practices',
+      slug: "cloud-migration-best-practices",
       title: "Cloud Migration Best Practices for Enterprise Organizations",
-      excerpt: "A comprehensive guide to successful cloud migration strategies, common pitfalls, and optimization techniques.",
+      excerpt:
+        "A comprehensive guide to successful cloud migration strategies, common pitfalls, and optimization techniques.",
       content: "Full article content would go here...",
-    
+
       category: "Cloud Computing",
       tags: ["Cloud", "Migration", "Strategy", "Enterprise"],
       image: cloudblog,
-    
     },
     {
       id: 3,
-      slug: 'cybersecurity-digital-age',
+      slug: "cybersecurity-digital-age",
       title: "Cybersecurity in the Digital Age: Protecting Your Business",
-      excerpt: "Essential security measures every organization needs to protect against evolving cyber threats.",
+      excerpt:
+        "Essential security measures every organization needs to protect against evolving cyber threats.",
       content: "Full article content would go here...",
-     
+
       category: "Cybersecurity",
       tags: ["Security", "Cyber Threats", "Protection", "Risk Management"],
       image: "https://qsort.blob.core.windows.net/media/CyberSecurity.jpg",
-     
     },
     {
       id: 4,
-      slug: 'digital-transformation-trends-2024',
+      slug: "digital-transformation-trends-2024",
       title: "Digital Transformation Trends Shaping 2024",
-      excerpt: "Key technology trends that will define digital transformation strategies in the coming year.",
+      excerpt:
+        "Key technology trends that will define digital transformation strategies in the coming year.",
       content: "Full article content would go here...",
-   
+
       category: "Digital Transformation",
       tags: ["Digital Transformation", "Trends", "Technology", "Strategy"],
       image: digitaltransformation,
-     
     },
     {
       id: 5,
-      slug: 'automation-manufacturing-industry',
+      slug: "automation-manufacturing-industry",
       title: "How Automation is Revolutionizing the Manufacturing Industry",
-      excerpt: "Industry 4.0 technologies are transforming manufacturing processes and improving operational efficiency.",
+      excerpt:
+        "Industry 4.0 technologies are transforming manufacturing processes and improving operational efficiency.",
       content: "Full article content would go here...",
-    
+
       category: "Industry Insights",
       tags: ["Manufacturing", "Automation", "Industry 4.0", "IoT"],
       image: robot,
-      
     },
     {
       id: 6,
-      slug: 'multi-cloud-strategy-guide',
+      slug: "multi-cloud-strategy-guide",
       title: "Building a Robust Multi-Cloud Strategy",
-      excerpt: "Learn how to leverage multiple cloud providers for enhanced reliability, performance, and cost optimization.",
+      excerpt:
+        "Learn how to leverage multiple cloud providers for enhanced reliability, performance, and cost optimization.",
       content: "Full article content would go here...",
-    
+
       category: "Cloud Computing",
       tags: ["Multi-Cloud", "Strategy", "Cost Optimization", "Architecture"],
       image: multicloud,
-     
-    }
+    },
   ];
 
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+  const filteredPosts = blogPosts.filter((post) => {
+    const matchesSearch =
+      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.tags.some((tag) =>
+        tag.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    const matchesCategory =
+      selectedCategory === "All" || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
-    <section
-  className="relative bg-cover bg-center min-h-[400px]"
-  style={{
-    backgroundImage: "url('https://qsort.blob.core.windows.net/media/Blog%20header.jpg')", // 👈 replace with your background image
-  }}
->
-  <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">
-    <div className="max-w-[29rem]  mt-20">
-      <h1 className="text-4xl md:text-5xl font-bold text-white">
-        Technology Insights &amp; Trends
-      </h1>
-      <p className="text-xl text-gray-300 leading-relaxed mt-[50px]">
-        Stay ahead of the curve with expert insights, industry analysis, and
-        practical guides on the latest technology trends transforming businesses
-        worldwide.
-      </p>
-    </div>
-  </div>
-</section>
+      <section
+        className="relative bg-cover bg-center min-h-[350px]"
+        style={{
+          backgroundImage:
+            "url('https://qsort.blob.core.windows.net/media/BlogF.jpg')",
+        }}
+      >
+        <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">
+          <div className="max-w-[29rem]  mt-20">
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              Technology Insights &amp; Trends
+            </h1>
+            <p className="text-xl text-gray-300 leading-relaxed mt-[50px]">
+              Stay ahead of the curve with expert insights, industry analysis,
+              and practical guides on the latest technology trends transforming
+              businesses worldwide.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Search and Filter */}
       <section className="py-10 bg-slate-800/50">
@@ -140,25 +149,21 @@ const Blog = () => {
                 className="pl-10 bg-slate-700 border-slate-600 text-white placeholder-gray-400"
               />
             </div>
-   <div className="flex flex-wrap gap-2">
-  {categories.map(category => {
+            <div className="flex flex-wrap gap-2">
+  {categories.map((category) => {
     const isSelected = selectedCategory === category;
-
-    const buttonClass = isSelected
-      ? category === 'All'
-        ? 'text-white bg-blue-500 hover:bg-blue-600'
-        : 'text-black bg-white hover:bg-gray-200'
-      : category === 'All'
-        ? 'border-slate-600 text-gray-300 hover:text-white hover:bg-slate-700'
-        : 'border-slate-600 text-black hover:text-white hover:bg-slate-700';
 
     return (
       <Button
         key={category}
-        variant={isSelected ? 'default' : 'outline'}
+        variant={isSelected ? "default" : "outline"}
         size="sm"
         onClick={() => setSelectedCategory(category)}
-        className={buttonClass}
+        className={
+          isSelected
+            ? "bg-blue-500 text-white hover:bg-blue-600"
+            : "border border-slate-600 text-black hover:text-white hover:bg-slate-700"
+        }
       >
         {category}
       </Button>
@@ -166,24 +171,6 @@ const Blog = () => {
   })}
 </div>
 
-
-
-            {/* <div className="flex flex-wrap gap-2">
-              {categories.map(category => (
-                <Button
-                  key={category}
-                  variant={selectedCategory === category ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedCategory(category)}
-                  className={selectedCategory === category 
-                    ? "bg-blue-500 hover:bg-blue-600" 
-                    : "border-slate-600 text-gray-300 hover:bg-slate-700"
-                  }
-                >
-                  {category}
-                </Button>
-              ))}
-            </div> */}
           </div>
         </div>
       </section>
@@ -193,10 +180,13 @@ const Blog = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <Card key={post.id} className="bg-slate-700/30 border-slate-600 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 overflow-hidden">
+              <Card
+                key={post.id}
+                className="bg-slate-700/30 border-slate-600 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 overflow-hidden"
+              >
                 <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
-                  <img 
-                    src={post.image} 
+                  <img
+                    src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover opacity-80"
                   />
@@ -206,33 +196,29 @@ const Blog = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 <CardContent className="p-6">
-                  {/* <div className="flex items-center text-sm text-gray-400 mb-3 space-x-4">
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {post.date}
-                    </div>
-                    <div className="flex items-center">
-                      <User className="h-4 w-4 mr-1" />
-                      {post.author}
-                    </div>
-                  </div> */}
-                  
-                  <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">{post.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
-                  
+                  <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.slice(0, 2).map((tag, index) => (
-                      <span key={index} className="bg-slate-600 text-gray-300 px-2 py-1 rounded text-xs">
+                      <span
+                        key={index}
+                        className="bg-slate-600 text-gray-300 px-2 py-1 rounded text-xs"
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     {/* <span className="text-gray-400 text-xs">{post.readTime}</span> */}
-                    <Link 
+                    <Link
                       to={`/blog/${post.slug}`}
                       className="text-blue-400 hover:text-blue-300 text-sm font-medium"
                     >
@@ -246,7 +232,9 @@ const Blog = () => {
 
           {filteredPosts.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
+              <p className="text-gray-400 text-lg">
+                No articles found matching your search criteria.
+              </p>
             </div>
           )}
         </div>

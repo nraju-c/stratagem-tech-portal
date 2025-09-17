@@ -94,7 +94,7 @@ const toText = (x) => {
 <section
   className="relative bg-cover bg-center min-h-[350px]"
   style={{
-    backgroundImage: "url('https://qsort.blob.core.windows.net/media/Contact.jpg')",
+    backgroundImage: "url('https://qsort.blob.core.windows.net/media/contactF.jpg')",
   }}
 >
   <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">

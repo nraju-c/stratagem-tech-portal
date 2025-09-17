@@ -65,10 +65,10 @@ const Industries = () => {
     <div className="min-h-screen ">
       {/* Hero Section */}
      <section
-  className="relative bg-cover  min-h-[360px]" // 👈 changed bg-center → bg-right
+  className="relative bg-cover  min-h-[350px]" // 👈 changed bg-center → bg-right
   style={{
     backgroundImage:
-      "url('https://qsort.blob.core.windows.net/media/IndustriesFinal.jpg')",
+      "url('https://qsort.blob.core.windows.net/media/IndustriesF.jpg')",
   }}
 >
   <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">

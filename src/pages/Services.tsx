@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Services = () => {
   const services = [
     {
-      image:'',
+      image:'https://qsort.blob.core.windows.net/media/IT%20ConsultingmainService.jpg',
       id: 'consulting',
       icon: Settings,
       title: "IT Consulting",
@@ -23,6 +23,8 @@ const Services = () => {
     },
     {
       id: 'cloud',
+            image:'https://qsort.blob.core.windows.net/media/Cloud%20Solutions.jpg',
+
       icon: Cloud,
       title: "Cloud Solutions",
       description: "Seamless cloud migration and management for scalable, secure, and cost-effective operations.",
@@ -38,6 +40,8 @@ const Services = () => {
     {
       id: 'ai',
       icon: Zap,
+                  image:'https://qsort.blob.core.windows.net/media/AI%20&%20AutomationMainService.jpg',
+
       title: "AI & Automation",
       description: "Intelligent automation solutions that streamline processes and enhance decision-making capabilities.",
       features: [
@@ -52,6 +56,8 @@ const Services = () => {
     {
       id: 'development',
       icon: Code,
+                        image:'https://qsort.blob.core.windows.net/media/Software%20Development.jpg',
+
       title: "Software Development",
       description: "Custom software solutions built with cutting-edge technologies to meet your unique business needs.",
       features: [
@@ -66,6 +72,8 @@ const Services = () => {
     {
       id: 'project-management',
       icon: Users,
+                              image:'https://qsort.blob.core.windows.net/media/servicesproject.jpg',
+
       title: "Technical Project Management",
       description: "Expert project management ensuring successful delivery of complex technical initiatives.",
       features: [
@@ -86,7 +94,7 @@ const Services = () => {
   className="relative bg-cover  min-h-[350px]"  // 👈 changed bg-center → bg-right
   style={{
     backgroundImage:
-      "url('https://qsort.blob.core.windows.net/media/Q%20sort%20-%20ServicesFinal.jpg')",
+      "url('https://qsort.blob.core.windows.net/media/ServicingF.jpg')",
   }}
 >
   <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">
@@ -184,7 +192,7 @@ const Services = () => {
               </Button>
             </Link>
             <Link to="/about">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
                 Learn About Us
               </Button>
             </Link>

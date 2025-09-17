@@ -143,9 +143,9 @@ const Careers = () => {
     <div className="min-h-screen ">
       {/* Hero Section */}
  <section
-  className="relative bg-cover bg-center min-h-[400px]"
+  className="relative bg-cover bg-center min-h-[350px]"
   style={{
-    backgroundImage: "url('https://qsort.blob.core.windows.net/media/CareersFinal.jpg')", // 👈 replace with your own
+    backgroundImage: "url('https://qsort.blob.core.windows.net/media/CareersF.jpg')", // 👈 replace with your own
   }}
 >
   <div className="w-full h-full flex justify-end items-start px-8 lg:px-20">
