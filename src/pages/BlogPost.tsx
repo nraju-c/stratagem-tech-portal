@@ -391,20 +391,20 @@ const BlogPost = () => {
     {
       title: "Machine Learning Implementation Guide for Enterprises",
       excerpt: "A step-by-step approach to implementing ML solutions in large organizations.",
-      date: "March 12, 2024",
-      slug: "ml-implementation-guide"
+      date: "March 12, ",
+      slug: "automation-manufacturing-industry"
     },
     {
       title: "Ethical AI: Building Responsible AI Systems",
       excerpt: "Best practices for ensuring AI systems are fair, transparent, and accountable.",
-      date: "March 8, 2024",
-      slug: "ethical-ai-practices"
+      date: "March 8, ",
+      slug: "future-of-ai-enterprise"
     },
     {
       title: "ROI of AI: Measuring Success in Digital Transformation",
       excerpt: "Key metrics and frameworks for evaluating AI investment returns.",
-      date: "March 5, 2024",
-      slug: "ai-roi-measurement"
+      date: "March 5, ",
+      slug: "digital-transformation-trends-2024"
     }
   ];
   const { slug } = useParams<{ slug: string }>();

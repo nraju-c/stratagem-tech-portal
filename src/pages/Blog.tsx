@@ -64,7 +64,7 @@ const Blog = () => {
     {
       id: 4,
       slug: "digital-transformation-trends-2024",
-      title: "Digital Transformation Trends Shaping 2024",
+      title: "Digital Transformation Trends Shaping ",
       excerpt:
         "Key technology trends that will define digital transformation strategies in the coming year.",
       content: "Full article content would go here...",
