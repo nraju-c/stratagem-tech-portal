@@ -52,7 +52,8 @@ const toText = (x) => {
     const res = await fetch(LOGIC_APP_URL, {
       method: "POST",
     headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({...formData,        formType: 'contact',    
+}),
     });
 
     let data;
