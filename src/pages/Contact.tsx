@@ -23,10 +23,30 @@ const INITIAL = {
   const [hp, setHp] = useState(""); // honeypot
   const [resetKey, setResetKey] = useState(0); // force-remount after success
 
-  const handleChange = (e) => {
-    const { name, value } = e.target; // make sure it's target.value
-    setFormData((s) => ({ ...s, [name]: value }));
-  };
+const handleChange = (e) => {
+  const { name, value } = e.target;
+
+  if (name === "phone") {
+    
+    let raw = value.replace("+1", "").replace(/\D/g, "").slice(0, 10);
+
+   
+    let formatted = raw;
+    if (raw.length > 6) {
+      formatted = `(${raw.slice(0, 3)}) ${raw.slice(3, 6)}-${raw.slice(6)}`;
+    } else if (raw.length > 3) {
+      formatted = `(${raw.slice(0, 3)}) ${raw.slice(3)}`;
+    } else if (raw.length > 0) {
+      formatted = `(${raw}`;
+    }
+
+    setFormData((prev) => ({ ...prev, phone: formatted }));
+    return;
+  }
+
+  setFormData((prev) => ({ ...prev, [name]: value }));
+};
+
 const toText = (x) => {
   if (x == null) return "";
   if (typeof x === "string") return x;
@@ -52,7 +72,7 @@ const toText = (x) => {
     const res = await fetch(LOGIC_APP_URL, {
       method: "POST",
     headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({...formData,        formType: 'contact',    
+      body: JSON.stringify({...formData,    phone: `+1 ${formData.phone}`,     formType: 'contact',    
 }),
     });
 
@@ -110,11 +130,6 @@ const toText = (x) => {
     </div>
   </div>
 </section>
-
-
-
-
-
 
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{marginTop:20}}>
@@ -176,18 +191,19 @@ const toText = (x) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-            Phone Number
+            Phone Number *
           </label>
-          <Input
-           
-            id="phone"
-            name="phone"
-            value={formData.phone ?? ""}
-            onChange={handleChange}
-            autoComplete="tel"
-            className="bg-slate-800 border-slate-600 text-white placeholder-gray-400"
-            placeholder="Enter your phone number"
-          />
+       <Input
+  id="phone"
+  name="phone"
+  value={`+1 ${formData.phone ?? ""}`}
+  onChange={handleChange}
+  required
+  autoComplete="tel"
+  className="bg-slate-800 border-slate-600 text-white placeholder-gray-400"
+  placeholder="(212) 456-7890"
+/>
+
         </div>
 
         <div>

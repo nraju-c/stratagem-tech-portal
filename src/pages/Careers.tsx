@@ -24,6 +24,27 @@ const [file, setFile] = useState<File | null>(null);
 const [submitting, setSubmitting] = useState(false);
 
 
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+
+   
+    value = value.replace("+1", "").replace(/\D/g, "");
+
+   
+    value = value.slice(0, 10);
+
+    
+    let formatted = value;
+    if (value.length > 6) {
+      formatted = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6)}`;
+    } else if (value.length > 3) {
+      formatted = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+    } else if (value.length > 0) {
+      formatted = `(${value}`;
+    }
+
+    setPhone(formatted);
+  };
 
   const jobOpenings = [
     {
@@ -442,11 +463,11 @@ console.log('b64 length:', resumeBase64?.length || 0);
 </div>
 
 <Input
-  placeholder="Phone Number"
-  value={phone}
-  onChange={(e) => setPhone(e.target.value)}
-  className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
-/>
+      placeholder="Phone Number"
+      value={`+1 ${phone}`}
+      onChange={handlePhoneChange}
+      className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
+    />
 
 <Textarea
   placeholder="Cover Letter"
