@@ -14,6 +14,17 @@ const Careers = () => {
   const [filterLocation, setFilterLocation] = useState('All');
   const [filterType, setFilterType] = useState('All');
 
+  const LOGIC_APP_URL = "https://prod-25.northcentralus.logic.azure.com:443/workflows/49b50e69362344519d0e53ee7dc91456/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=Njib58zHSCDrwCGLUDeqtjYxWyGdSloeEFCFS7I8V0k";
+
+const [fullName, setFullName] = useState('');
+const [email, setEmail] = useState('');
+const [phone, setPhone] = useState('');
+const [coverLetter, setCoverLetter] = useState('');
+const [file, setFile] = useState<File | null>(null);
+const [submitting, setSubmitting] = useState(false);
+
+
+
   const jobOpenings = [
     {
       id: 1,
@@ -131,13 +142,81 @@ const Careers = () => {
     return matchesLocation && matchesType;
   });
 
-  const handleApply = () => {
-    toast({
-      title: "Application Submitted!",
-      description: "Thank you for your interest. We'll review your application and get back to you soon.",
+// keep — returns PURE base64 (no prefix)
+// ALWAYS returns pure base64 (no prefix)
+const fileToBase64 = (f: File) =>
+  new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const s = String(reader.result || '');
+      // Try to split on the first comma. If not found, use the whole string.
+      const i = s.indexOf(',');
+      const base64 = i >= 0 ? s.substring(i + 1) : s;  // <-- pure base64
+      resolve(base64);
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(f); // produces data:<mime>;base64,<data>
+  });
+
+
+
+// robust MIME (use file.type, fallback from extension)
+const getMime = (f?: File | null) => {
+  if (!f) return 'application/octet-stream';
+  if (f.type) return f.type; // browser-provided MIME
+  const n = f.name.toLowerCase();
+  if (n.endsWith('.pdf'))  return 'application/pdf';
+  if (n.endsWith('.docx')) return 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+  if (n.endsWith('.doc'))  return 'application/msword';
+  return 'application/octet-stream';
+};
+
+const handleApply = async () => {
+  if (!fullName || !email) {
+    toast({ title: 'Missing info', description: 'Name and Email are required.' });
+    return;
+  }
+
+  setSubmitting(true);
+  try {
+    const resumeBase64 = file ? await fileToBase64(file) : '';
+
+const payload = {
+  formType: 'jobApplication',
+  name: fullName,
+  email,
+  phone,
+  coverLetter,
+  resumeFileName: file?.name || 'resume.pdf',
+  resumeFileContent: resumeBase64, // pure base64
+};
+
+// optional: sanity check in the browser devtools console
+console.log('b64 length:', resumeBase64?.length || 0);
+
+
+    const res = await fetch(LOGIC_APP_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     });
+
+    const ct = res.headers.get('content-type') || '';
+    const data = ct.includes('application/json') ? await res.json() : { message: await res.text() };
+    if (!res.ok) throw new Error(data?.message || `Failed: ${res.status}`);
+
+    toast({ title: 'Application Submitted!', description: data?.message || "Thanks! We've received your application." });
+
     setSelectedJob(null);
-  };
+    setFullName(''); setEmail(''); setPhone(''); setCoverLetter(''); setFile(null);
+  } catch (e: any) {
+    toast({ title: 'Error', description: e?.message || 'Submission failed.' });
+  } finally {
+    setSubmitting(false);
+  }
+};
+
+
 
   return (
     <div className="min-h-screen ">
@@ -344,43 +423,70 @@ const Careers = () => {
                 <div className="border-t border-slate-600 pt-6">
                   <h3 className="text-lg font-semibold text-white mb-4">Apply for this Position</h3>
                   <div className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <Input
-                        placeholder="Full Name"
-                        className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
-                      />
-                      <Input
-                        type="email"
-                        placeholder="Email Address"
-                        className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
-                      />
-                    </div>
-                    
-                    <Input
-                      placeholder="Phone Number"
-                      className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
-                    />
-                    
-                    <Textarea
-                      placeholder="Cover Letter"
-                      rows={4}
-                      className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
-                    />
-                    
-                    <div className="border-2 border-dashed border-slate-600 rounded-lg p-6 text-center">
-                      <Upload className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                      <p className="text-gray-400 text-sm">Upload your resume (PDF, DOC, DOCX)</p>
-                      <Button variant="outline" size="sm" className="mt-2 border-slate-600">
-                        Choose File
-                      </Button>
-                    </div>
-                    
-                    <Button 
-                      onClick={handleApply}
-                      className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 w-full"
-                    >
-                      Submit Application
-                    </Button>
+                   {/* inside the modal form area */}
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <Input
+    placeholder="Full Name"
+    value={fullName}
+    onChange={(e) => setFullName(e.target.value)}
+    className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
+  />
+  <Input
+    type="email"
+    placeholder="Email Address"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
+  />
+</div>
+
+<Input
+  placeholder="Phone Number"
+  value={phone}
+  onChange={(e) => setPhone(e.target.value)}
+  className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
+/>
+
+<Textarea
+  placeholder="Cover Letter"
+  rows={4}
+  value={coverLetter}
+  onChange={(e) => setCoverLetter(e.target.value)}
+  className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
+/>
+
+<input
+  id="resumeFile"
+  type="file"
+  accept=".pdf,.doc,.docx"
+  className="hidden"
+  onChange={(e) => setFile(e.target.files?.[0] || null)}
+/>
+
+<div className="border-2 border-dashed border-slate-600 rounded-lg p-6 text-center">
+  <Upload className="h-8 w-8 text-gray-400 mx-auto mb-2" />
+  <p className="text-gray-400 text-sm">
+    {file ? <>Selected: <span className="text-white">{file.name}</span></> : 'Upload your resume (PDF, DOC, DOCX)'}
+  </p>
+  <Button
+    variant="outline"
+    size="sm"
+    className="mt-2 border-slate-600"
+    onClick={() => document.getElementById('resumeFile')?.click()}
+  >
+    Choose File
+  </Button>
+</div>
+
+<Button
+  onClick={handleApply}
+  disabled={submitting}
+  className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 w-full"
+>
+  {submitting ? 'Submitting…' : 'Submit Application'}
+</Button>
+
                   </div>
                 </div>
               </div>
