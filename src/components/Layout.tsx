@@ -19,14 +19,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     { 
       name: 'SERVICES', 
       href: '/services',
-      hasDropdown: true,
-      subItems: [
-        { name: 'IT Consulting', href: '/services/consulting' },
-        { name: 'Cloud Solutions', href: '/services/cloud' },
-        { name: 'AI & Automation', href: '/services/ai' },
-        { name: 'Software Development', href: '/services/development' },
-        { name: 'Project Management', href: '/services/project-management' }
-      ]
+     
     },
     { name: 'INDUSTRIES', href: '/industries' },
     { name: 'BLOG', href: '/blog' },
@@ -60,46 +53,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             
 {navigation.map((item) => (
   <div key={item.name} className="relative group">
-    {item.hasDropdown ? (
-      <div
-        className="relative"
-        onMouseEnter={() => setIsServicesOpen(true)}
-        onMouseLeave={() => setIsServicesOpen(false)}
-      >
-        <div
-          className={`px-3 py-2 text-sm font-dind tracking-wide flex items-center cursor-pointer transition-colors ${
-            location.pathname.startsWith(item.href) && item.href !== '/'
-              ? 'text-blue-400'
-              : 'text-white'
-          }`}
-          style={{ fontWeight: 600 }}
-        >
-          <Link
-            to={item.href}
-    
-            onClick={() => setIsServicesOpen(false)}
-          >
-            {item.name}
-          </Link>
-          <ChevronDown className="w-4 h-4 ml-1" />
-        </div>
-
-        {isServicesOpen && (
-          <div className="absolute top-full left-0 mt-0.5 w-64 bg-slate-800 shadow-xl border border-blue-500/20 rounded-lg z-50 overflow-hidden">
-            {item.subItems?.map((subItem) => (
-              <Link
-                key={subItem.name}
-                to={subItem.href}
-                className="block px-4 py-2 text-sm font-dind font-normal text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors"
-                onClick={() => setIsServicesOpen(false)}
-              >
-                {subItem.name}
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
-    ) : (
+   
       <Link
         to={item.href}
         style={{ fontWeight: 600 }}
@@ -111,7 +65,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       >
         {item.name}
       </Link>
-    )}
+  
   </div>
 ))}
 
