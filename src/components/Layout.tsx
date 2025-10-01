@@ -149,7 +149,7 @@ className={`block px-3 py-2 text-base font-bold tracking-wide transition-colors 
 <div className="border-t border-slate-700 mt-8 pt-6 text-center text-sm text-gray-400">
   <span>© 2025 QSORT. All rights reserved. </span>
   <a
-    href="/privacy-policy.pdf"
+    href="https://qsort.blob.core.windows.net/media/QSORT Privacy Policy.docx"
     download
     className="hover:text-white  transition-colors"
   >

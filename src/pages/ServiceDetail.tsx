@@ -193,7 +193,7 @@ const handleBack = () => {
       title: "Software Development",
       subtitle: "Custom Software Solutions",
       imageUrl:softwareDevelopment,
-      backgroundImage:'https://qsort.blob.core.windows.net/media/Software%20developmentF.jpg',
+      backgroundImage:'https://qsort.blob.core.windows.net/media/tech.jpeg',
 
       description: "Build robust, scalable software solutions tailored to your unique business requirements using cutting-edge technologies and industry best practices for optimal performance and user experience.",
       features: [
@@ -249,7 +249,7 @@ const handleBack = () => {
       title: "Technical Project Management",
       subtitle: "Expert Project Leadership",
       imageUrl:projectManagement,
-      backgroundImage:'https://qsort.blob.core.windows.net/media/Project%20ManagementF.jpg',
+      backgroundImage:'https://qsort.blob.core.windows.net/media/mang.jpeg',
 
       description: "Ensure successful delivery of complex technical initiatives with expert project management that combines technical expertise, proven methodologies, and stakeholder alignment.",
       features: [
