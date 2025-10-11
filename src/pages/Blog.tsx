@@ -150,27 +150,26 @@ const Blog = () => {
               />
             </div>
             <div className="flex flex-wrap gap-2">
-  {categories.map((category) => {
-    const isSelected = selectedCategory === category;
+              {categories.map((category) => {
+                const isSelected = selectedCategory === category;
 
-    return (
-      <Button
-        key={category}
-        variant={isSelected ? "default" : "outline"}
-        size="sm"
-        onClick={() => setSelectedCategory(category)}
-        className={
-          isSelected
-            ? "bg-blue-500 text-white hover:bg-blue-600"
-            : "border border-slate-600 text-black hover:text-white hover:bg-slate-700"
-        }
-      >
-        {category}
-      </Button>
-    );
-  })}
-</div>
-
+                return (
+                  <Button
+                    key={category}
+                    variant={isSelected ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setSelectedCategory(category)}
+                    className={
+                      isSelected
+                        ? "bg-blue-500 text-white hover:bg-blue-600"
+                        : "border border-slate-600 text-black hover:text-white hover:bg-slate-700"
+                    }
+                  >
+                    {category}
+                  </Button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
