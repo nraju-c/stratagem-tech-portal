@@ -58,8 +58,6 @@ const About = () => {
   className="min-h-screen"
  
 >
-      
-
     <section
         className="relative bg-cover bg-center min-h-[350px]"
   style={{
